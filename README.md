@@ -1,3 +1,55 @@
+# ENLARK (Vacuum Pumps) Website
+
+React + Vite website for **Enlark Pumps Pvt. Ltd.** with pages for About Us, Products, Industries, and Contact.
+
+## Tech stack
+
+- React
+- Vite
+- TypeScript
+- React Router (HashRouter)
+
+## Getting started
+
+### Install
+
+```bash
+npm install
+```
+
+### Run dev server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Routes (pages)
+
+Because the app uses a hash router, routes look like this:
+
+- Home: `/#/`
+- About Us: `/#/about-us`
+- Our Products: `/#/products`
+- Industries We Serve: `/#/industries`
+- Contact Us: `/#/contact`
+
+## Styling
+
+- Global typography rules live in `src/index.css`.
+- Page/component styles live in `src/App.css`.
+
 <<<<<<< HEAD
 # React + TypeScript + Vite
 
