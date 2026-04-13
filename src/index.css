@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-dark-blue: #1F3A63;
+  --secondary-blue: #5A6E8C;
+  --button-blue: #2E4A73;
+  --background-color: #F5F7FA;
+  --font-family: 'Poppins', sans-serif;
+  --content-font-family: 'Montserrat', sans-serif;
+  /* Global heading/title standard (strict) */
+  --heading-color: #089AD3;
+  --heading-size: 25px;
+  --heading-weight: 800;
+  /* Global paragraph/content standard (strict) */
+  --content-color: #000000;
+  --content-size: 17.5px;
+  --p-size: 15px;
+  --content-paragraph-margin-y: 18px;
+  --content-list-padding-left: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--content-font-family);
+  background-color: var(--background-color);
+  color: var(--content-color);
+  font-size: var(--content-size);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Global paragraph/content styling (strict) */
+p,
+li,
+span,
+small,
+label,
+input,
+textarea,
+select,
+button,
+a {
+  color: var(--content-color) !important;
+  font-family: var(--content-font-family) !important;
+  font-size: var(--content-size) !important;
+}
+
+p {
+  margin: var(--content-paragraph-margin-y) 0 !important;
+  font-size: var(--p-size) !important;
+  line-height: 1.75 !important;
+}
+
+ul,
+ol {
+  margin: var(--content-paragraph-margin-y) 0 !important;
+  padding-left: var(--content-list-padding-left) !important;
+}
+
+li {
+  margin: 0 0 8px 0 !important;
+}
+
+/* Global heading + title styling (strict) */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.about-split-title,
+.about-hero-title,
+.info-title,
+.info-subtitle,
+.info-advantages-title,
+.product-main-title,
+.industries-title,
+.products-title,
+.products-col-title,
+.industries-hero-title {
+  color: var(--heading-color) !important;
+  font-family: var(--font-family) !important;
+  font-size: var(--heading-size) !important;
+  font-weight: var(--heading-weight) !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-family);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
