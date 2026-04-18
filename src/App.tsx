@@ -9,8 +9,8 @@ import AboutUsPage from './pages/AboutUs';
 import { ContactPage } from './pages/Contact';
 import { HomePage } from './pages/Home';
 import { IndustriesPage } from './pages/Industries';
+import { ProductDetailPage } from './pages/ProductDetail';
 import { ProductsPage } from './pages/Products';
-import { TechnicalSupportPage } from './pages/TechnicalSupport';
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/technical-support" element={<TechnicalSupportPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />

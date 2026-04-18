@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import { COMPANY } from '../config/company';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -17,12 +16,8 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <div className="logo-section">
+        <div className="logo-section" style={{ marginLeft: '40px' }}>
           <img src={logo} alt="Enlark Logo" className="logo" />
-          <div className="logo-text">
-            <h2>{COMPANY.nameLong.toUpperCase()}</h2>
-            <p>(AN ISO 9001:2015 COMPANY)</p>
-          </div>
         </div>
 
         <button
@@ -79,15 +74,6 @@ export function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Industries We Serve
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/technical-support"
-              className={({ isActive }) => (isActive ? 'active' : undefined)}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Technical Support
             </NavLink>
           </li>
           <li>

@@ -134,11 +134,95 @@ button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.range-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: #089AD3 !important;
+}
+
+.vision-card, .mission-card {
+  transition: all 0.3s ease;
+}
+
+.vision-card:hover, .mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Premium Badge Component */
+.premium-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #E0F2FE;
+  color: #089AD3;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.premium-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Specific Overrides for Premium Sections */
+.hero-text-white {
+  color: #ffffff !important;
+}
+
+/* Extremely High Specificity Overrides */
+html body .mission-text-black, 
+html body .mission-text-black span, 
+html body .mission-text-black li,
+html body .mission-text-black strong,
+html body .mission-text-black p {
+  color: #000000 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+}
+
+html body .mission-text-black strong {
+  font-weight: 800 !important;
+}
+
+/* Forceful Overrides for Final Quote */
+.final-quote-text {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  line-height: 1.8 !important;
+  margin: 0 !important;
+}
+
 /* Utilities */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Forced Typography for Contact Page */
+.contact-premium-page, 
+.contact-premium-page input, 
+.contact-premium-page textarea, 
+.contact-premium-page label, 
+.contact-premium-page button,
+.contact-premium-page p,
+.contact-premium-page div {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.contact-premium-page label,
+.contact-premium-page p,
+.contact-premium-page input,
+.contact-premium-page textarea {
+  font-size: 15px !important;
+  color: #000000 !important;
 }
 
 .flex-center {

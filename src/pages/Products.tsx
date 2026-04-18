@@ -1,161 +1,181 @@
-import React from 'react';
-import carousel1 from '../assets/carousel1.png';
-import carousel2 from '../assets/carousel2.jpeg';
-import carousel3 from '../assets/carousel3.png';
-import carousel4 from '../assets/carousel4.jpeg';
-import heroImg from '../assets/hero.png';
-import waterring from '../assets/waterring.jpg';
 
-type ProductCategoryKey = 'vacuum-pumps' | 'compressors' | 'blowers' | 'systems' | 'measurement' | 'software';
+import { useNavigate } from 'react-router-dom';
+import { products } from '../data/productsData';
 
 export function ProductsPage() {
-  const topTabs: Array<{ key: ProductCategoryKey; label: string }> = [
-    { key: 'vacuum-pumps', label: 'VACUUM PUMPS' },
-    { key: 'compressors', label: 'COMPRESSORS' },
-    { key: 'blowers', label: 'BLOWERS' },
-    { key: 'systems', label: 'SYSTEMS' },
-    { key: 'measurement', label: 'MEASUREMENT EQUIPMENT' },
-    { key: 'software', label: 'SOFTWARE' },
-  ];
-
-  const [activeTab, setActiveTab] = React.useState<ProductCategoryKey>('vacuum-pumps');
-
-  const tiles = {
-    'vacuum-pumps': [
-      { name: 'Water Ring Vacuum Pump', image: waterring },
-      { name: 'Liquid Ring Vacuum Pump', image: carousel3 },
-      { name: 'Oil Sealed Rotary Vacuum Pump', image: carousel2 },
-      { name: 'Oil Lubricated Vacuum Pump', image: carousel1 },
-    ],
-    compressors: [
-      { name: 'Liquid Ring Compressor', image: carousel4 },
-      { name: 'Vacuum System Package (Dummy)', image: heroImg },
-      { name: 'Customized Skid (Dummy)', image: carousel3 },
-      { name: 'Process Package (Dummy)', image: carousel1 },
-    ],
-    blowers: [
-      { name: 'Twin Lobe Roots Blower', image: carousel2 },
-      { name: 'Mechanical Vacuum Booster', image: carousel4 },
-      { name: 'Roots Booster System (Dummy)', image: heroImg },
-      { name: 'High Flow Blower (Dummy)', image: carousel1 },
-    ],
-    systems: [
-      { name: 'Water Recovery Vacuum Pump System', image: carousel3 },
-      { name: 'Pneumatic Conveying System', image: carousel4 },
-      { name: 'Vacuum System (Dummy)', image: heroImg },
-      { name: 'Central Vacuum System (Dummy)', image: carousel2 },
-    ],
-    measurement: [
-      { name: 'Vacuum Gauge (Dummy)', image: carousel1 },
-      { name: 'Leak Test Setup (Dummy)', image: carousel3 },
-      { name: 'Vibration Test (Dummy)', image: carousel2 },
-      { name: 'Noise Test (Dummy)', image: carousel4 },
-    ],
-    software: [
-      { name: 'Selection Tool (Dummy)', image: heroImg },
-      { name: 'Maintenance Planner (Dummy)', image: carousel1 },
-      { name: 'Service Tracking (Dummy)', image: carousel2 },
-      { name: 'Performance Logs (Dummy)', image: carousel3 },
-    ],
-  } as const;
-
-  const sections = [
-    {
-      leftTitle: 'Rotary vane →',
-      leftItems: tiles['vacuum-pumps'].slice(2, 4),
-      rightTitle: 'Claw →',
-      rightItems: tiles['vacuum-pumps'].slice(0, 2),
-    },
-    {
-      leftTitle: 'Screw →',
-      leftItems: tiles['systems'].slice(0, 2),
-      rightTitle: 'Liquid Ring →',
-      rightItems: tiles['vacuum-pumps'].slice(0, 2),
-    },
-    {
-      leftTitle: 'Rotary Lobe →',
-      leftItems: tiles['blowers'].slice(0, 2),
-      rightTitle: 'Booster →',
-      rightItems: tiles['blowers'].slice(2, 4),
-    },
-  ];
+  const navigate = useNavigate();
+  const categories = Array.from(new Set(products.map(p => p.category)));
 
   return (
     <div className="products-page">
       <div className="products-top">
         <div className="container">
-          <h1 className="products-title">Our Products</h1>
-          <div className="products-tabs" role="tablist" aria-label="Product categories">
-            {topTabs.map((t) => (
-              <button
-                key={t.key}
-                type="button"
-                className={`products-tab ${activeTab === t.key ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveTab(t.key);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                role="tab"
-                aria-selected={activeTab === t.key}
-              >
-                {t.label}
-              </button>
-            ))}
+          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 auto 15px' }}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Discovery & Precision
           </div>
+          <h1 className="products-title">Enlark Vacuum Pumps</h1>
+          <p className="products-subtitle">Precision Engineered Vacuum Solutions for Global Industries</p>
         </div>
       </div>
 
       <div className="products-body">
         <div className="container">
-          {activeTab !== 'vacuum-pumps' ? (
-            <div className="products-grid">
-              {tiles[activeTab].map((p) => (
-                <div className="product-tile" key={p.name}>
-                  <div className="product-tile-imgWrap">
-                    <img src={p.image} alt={p.name} className="product-tile-img" />
-                  </div>
-                  <div className="product-tile-name">{p.name}</div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="products-portfolio">
-              {sections.map((row, idx) => (
-                <div className="products-row" key={idx}>
-                  <div className="products-col">
-                    <div className="products-col-title">{row.leftTitle}</div>
-                    <div className="products-col-grid">
-                      {row.leftItems.map((p) => (
-                        <div className="product-tile" key={p.name}>
-                          <div className="product-tile-imgWrap">
-                            <img src={p.image} alt={p.name} className="product-tile-img" />
-                          </div>
-                          <div className="product-tile-name">{p.name}</div>
-                        </div>
-                      ))}
+          {categories.map((category) => (
+            <div key={category} className="product-category-section">
+              <h2 className="category-heading">{category}</h2>
+              <div className="products-grid">
+                {products
+                  .filter((p) => p.category === category)
+                  .map((product) => (
+                    <div 
+                      className="product-tile" 
+                      key={product.id}
+                      onClick={() => navigate(`/product/${product.id}`)}
+                    >
+                      <div className="product-tile-imgWrap">
+                        <img src={product.image} alt={product.name} className="product-tile-img" />
+                      </div>
+                      <div className="product-tile-info">
+                        <div className="product-tile-name">{product.name}</div>
+                        <div className="explore-more-btn">Explore more &rarr;</div>
+                        {product.id === 15 && <span className="status-badge">Pending</span>}
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="products-col">
-                    <div className="products-col-title">{row.rightTitle}</div>
-                    <div className="products-col-grid">
-                      {row.rightItems.map((p) => (
-                        <div className="product-tile" key={p.name}>
-                          <div className="product-tile-imgWrap">
-                            <img src={p.image} alt={p.name} className="product-tile-img" />
-                          </div>
-                          <div className="product-tile-name">{p.name}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  ))}
+              </div>
             </div>
-          )}
+          ))}
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        .products-page {
+          background: #f8f9fa;
+          padding-bottom: 80px;
+        }
+        .products-top {
+          background: linear-gradient(135deg, #1b5b7a 0%, #26a4df 100%);
+          color: white;
+          padding: 60px 0;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .products-title {
+          font-size: 42px;
+          font-weight: 700;
+          margin: 0;
+          letter-spacing: 1px;
+          color: white !important;
+        }
+        .products-subtitle {
+          font-size: 18px;
+          opacity: 0.9;
+          margin-top: 10px;
+          color: white;
+        }
+        .product-category-section {
+          margin-bottom: 50px;
+        }
+        .category-heading {
+          font-size: 24px;
+          color: #1b5b7a;
+          border-left: 5px solid #26a4df;
+          padding-left: 15px;
+          margin-bottom: 25px;
+          font-weight: 600;
+        }
+        .products-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 25px;
+        }
+        .product-tile {
+          background: white;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          transition: all 0.4s ease;
+          border: 1px solid #eee;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          position: relative;
+        }
+        .product-tile:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .product-tile-imgWrap {
+          height: 250px;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          transition: transform 0.4s ease;
+        }
+        .product-tile-img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+        .product-tile-info {
+           padding: 0 15px;
+           max-height: 0;
+           opacity: 0;
+           overflow: hidden;
+           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+           background: white;
+           display: flex;
+           flex-direction: column;
+        }
+        .product-tile:hover .product-tile-info {
+           max-height: 250px;
+           opacity: 1;
+           padding: 20px 15px;
+           border-top: 1px solid #f0f0f0;
+        }
+        .product-tile-name {
+          font-size: 15px;
+          font-weight: 600;
+          color: #1b5b7a;
+          line-height: 1.4;
+          margin-bottom: 15px;
+        }
+        .explore-more-btn {
+           align-self: flex-end;
+           font-size: 13px;
+           font-weight: 700;
+           color: #26a4df;
+           letter-spacing: 0.5px;
+           transition: color 0.3s;
+        }
+        .product-tile:hover .explore-more-btn {
+           color: #1b5b7a;
+        }
+        .status-badge {
+          display: inline-block;
+          background: #ffc107;
+          color: #000;
+          font-size: 11px;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-weight: 700;
+          margin-top: 8px;
+          width: fit-content;
+        }
+        @media (max-width: 768px) {
+          .products-title { font-size: 32px; }
+          .products-grid { grid-template-columns: 1fr; }
+          .product-tile-info {
+             max-height: none;
+             opacity: 1;
+             padding: 15px;
+             border-top: 1px solid #f0f0f0;
+          }
+        }
+      `}} />
     </div>
   );
 }
-
