@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import hero1 from '../assets/01.Rotary Vane Pumps – Single Stage Oil Immersed Direct Drive/01.Rotary Vane Pumps – Single Stage Oil Immersed Direct Drive.jpg';
 import hero2 from '../assets/07.Water Ring Pumps – Single Stage Direct Drive/01.Water Ring Pumps – Single Stage Direct Drive.jpg';
 import hero3 from '../assets/05.Belt Drive Pumps – Oil Lubricated/04.Belt Drive Pumps – Oil Lubricated.jpg';
-import badgeImg from '../assets/badge.png';
 import vacumBg from '../assets/vacum.png';
 import accessoryImg from '../assets/14.Milking Machine Accessories/02..Milking Machine Accessories.jpg';
 import pharmImg from '../assets/pharmaceuticals.jpeg';
@@ -65,10 +64,17 @@ function AboutSection() {
       <div className="container flex-between">
         <div className="about-left">
           <div className="badge-container">
-            <img src={badgeImg} alt="2 Years Badge" className="badge-img" />
-            <p className="badge-years">2024-2026</p>
-            <p className="badge-text decoration">
-              A 2-year history of
+            <div style={{ marginBottom: '15px' }}>
+              <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 15 L54 6 L64 9 L60 18 A32 32 0 0 1 76 28 L85 24 L90 33 L81 38 A32 32 0 0 1 85 50 L94 54 L91 64 L82 60 A32 32 0 0 1 72 76 L76 85 L67 90 L62 81 A32 32 0 0 1 50 85 L46 94 L36 91 L40 82 A32 32 0 0 1 24 72 L15 76 L10 67 L19 62 A32 32 0 0 1 15 50 L6 46 L9 36 L18 40 A32 32 0 0 1 28 24 L24 15 L33 10 L38 19 A32 32 0 0 1 50 15 Z" fill="transparent" stroke="#013D8B" strokeWidth="4.5" strokeLinejoin="round"/>
+                <circle cx="50" cy="50" r="23" fill="transparent" stroke="#013D8B" strokeWidth="3" />
+                <circle cx="50" cy="50" r="16" fill="transparent" stroke="#013D8B" strokeWidth="1" strokeDasharray="3 3" />
+                <text x="50" y="66" fontSize="46" fontWeight="900" textAnchor="middle" fill="#013D8B" style={{ fontFamily: 'Arial, sans-serif' }}>7</text>
+              </svg>
+            </div>
+            <p className="badge-years" style={{ letterSpacing: '1px', fontWeight: '800' }}>2019-2026</p>
+            <p className="badge-text decoration" style={{ fontWeight: '600' }}>
+              A 7-year history of
               <br />
               quality and reliability
             </p>
@@ -79,10 +85,10 @@ function AboutSection() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             Our Legacy
           </div>
-          <h2 className="section-title">Welcome to Enlark</h2>
+          <h2 className="section-title">Welcome to Enlark Enterprises Private Limited</h2>
           <div className="about-content">
             <p>
-              Enlark, an ISO 9001: 2015 certified enterprise, is a name you can trust being pioneers in high precision Vacuum Technology with four decades of inherited legacy and technology of famous Bharath Vacuum Pumps brand. We deliver a diverse range of Vacuum Pumps, Vacuum Based Machinery and Vacuum Systems that cater to varied industries worldwide ranging from Pharmaceuticals, Chemical Processing, Jewellery Making, Food Processing, Packaging Solutions, Automotive, General Engineering, Dairy Farming, Paint Manufacturing, Distillation, Defense Applications, Lab Equipment and many others.
+              Enlark Enterprises Private Limited, <b>an ISO 9001: 2015 certified enterprise,</b> is a name you can trust being pioneers in high precision Vacuum Technology with four decades of inherited legacy and technology of famous <b>Bharath Vacuum Pumps brand.</b> We deliver a diverse range of Vacuum Pumps, Vacuum Based Machinery and Vacuum Systems that cater to varied industries worldwide ranging from <b>Pharmaceuticals, Chemical Processing, Jewellery Making, Food Processing, Packaging Solutions, Automotive, General Engineering, Dairy Farming, Paint Manufacturing, Distillation, Defense Applications, Lab Equipment</b> and many others.
             </p>
           </div>
         </div>
@@ -107,27 +113,27 @@ function DetailedAboutSection() {
         borderRadius: '30px 0 0 30px'
       }} />
 
-      <div className="container" style={{ padding: '80px 15px', position: 'relative', zIndex: 1 }}>
+      <div className="container" style={{ padding: '40px 15px', position: 'relative', zIndex: 1 }}>
         <div className="flex-stack-mobile" style={{ display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>
           
           {/* Left Side: Professional Text Content */}
           <div style={{ flex: '1', minWidth: '350px' }}>
             <div className="premium-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Global Presence
+              OUR COMPANY
             </div>
             <div className="about-text-content" style={{ fontSize: '17px', lineHeight: '1.9', color: '#444' }}>
               <div style={{ marginBottom: '28px', fontWeight: '500', color: '#089AD3' }}>
-                The company is conveniently located at Coimbatore, Tamilnadu and cater to clients worldwide.
+                <b>The company is conveniently located at Coimbatore, Tamilnadu and cater to clients worldwide.</b>
               </div>
               <p style={{ marginBottom: '28px' }}>
-                With a strong engineering team, Enlark is your right choice for high quality vacuum pumps, accessories and Vacuum Based Systems.
+                With a strong engineering team, Enlark Enterprises Private Limited is your right choice for high quality vacuum pumps, accessories and Vacuum Based Systems.
               </p>
               <p style={{ marginBottom: '28px' }}>
-                Enlark offers all types of Vacuum Pumps ranging from 50LPM (3m³ /Min) to 20000 LPM (1200m³ /Min). Enlark is specialized in Rotary Vane, Water Ring, Diaphragm and Piston Pumps. The pumps come in multiple models like Oil Immersed, Oil Free as well as Oil Lubricated Vacuum Pumps.
+                Enlark Enterprises Private Limited offers all types of Vacuum Pumps ranging from <b>50LPM (3m³ /Min) to 20000 LPM (1200m³ /Min).</b> Enlark Enterprises Private Limited is specialized in Rotary Vane, Water Ring, Diaphragm and Piston Pumps. The pumps come in multiple models like Oil Immersed, Oil Free as well as Oil Lubricated Vacuum Pumps.
               </p>
               <p style={{ marginBottom: '28px' }}>
-                Enlark provides you the option to choose from Direct Drive and Belt Drive pumps. Enlark also delivers Single Stage as well as Double Stage models in their Rotary Vane, Water Ring, and Diaphragm pumps.
+                Enlark Enterprises Private Limited provides you the option to choose from Direct Drive and Belt Drive pumps. Enlark Enterprises Private Limited also delivers Single Stage as well as Double Stage models in their Rotary Vane, Water Ring, and Diaphragm pumps.
               </p>
             </div>
           </div>
@@ -146,7 +152,7 @@ function DetailedAboutSection() {
               }} className="responsive-image-wrap">
                 <img 
                   src={accessoryImg} 
-                  alt="Enlark Vacuum Pump Accessories" 
+                  alt="Enlark Enterprises Private Limited Vacuum Pump Accessories" 
                   style={{ 
                     width: '100%', 
                     height: '100%', 
@@ -170,7 +176,7 @@ function CommitmentBanner() {
       className="commitment-banner responsive-commitment"
       style={{
         width: '100%',
-        padding: '80px 0',
+        padding: '40px 0',
         backgroundImage: `url(${vacumBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -205,9 +211,12 @@ function CommitmentBanner() {
           }} />
           <h3
             style={{
+              fontSize: '25px !important',
+              color: '#089AD3',
               lineHeight: '1.7',
               fontWeight: 'var(--heading-weight)' as React.CSSProperties['fontWeight'],
               margin: '0px 0px 15px',
+              fontFamily: "'Poppins', sans-serif"
             }}
           >
             We, at Enlark, are committed to consistent quality in our products and
@@ -401,9 +410,6 @@ function ProductSection() {
 }
 
 function IndustriesSection() {
-  const [activeInd, setActiveInd] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
   const industries = [
     { title: 'Pharmaceuticals', img: pharmImg, desc: 'Precision vacuum solutions for laboratory and production-scale pharmaceutical manufacturing.' },
     { title: 'Chemical Processing', img: chemImg, desc: 'Durable pumps designed to handle corrosive and aggressive chemical environments.' },
@@ -419,144 +425,125 @@ function IndustriesSection() {
     { title: 'Lab Equipment', img: labImg, desc: 'Precision bench-top and integrated laboratory vacuum pumps for scientific research.' },
   ];
 
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveInd((prev) => (prev + 1) % industries.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [isPaused, industries.length]);
-
   return (
     <section 
-      className="industries-interactive-section responsive-industries-section" 
-      style={{ padding: '100px 0', backgroundColor: '#fff', overflow: 'hidden' }}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      className="industries-grid-home-section" 
+      style={{ padding: '60px 0', backgroundColor: '#fff' }}
     >
       <div className="container">
-        <div style={{ textAlign: 'left', marginBottom: '50px' }}>
-          <div className="premium-badge" style={{ margin: '0 0 20px' }}>
+        <div style={{ textAlign: 'left', marginBottom: '40px' }}>
+          <div className="premium-badge" style={{ margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             Sectors Supported
           </div>
-          <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#011A2F' }}>Industries We Serve</h2>
-          <p style={{ color: '#666', marginTop: '10px' }}>Excellence in Vacuum Technology across diverse sectors.</p>
+          <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#011A2F' }}>Industries We Serve</h2>
+          <p style={{ color: '#666', marginTop: '5px' }}>Excellence in Vacuum Technology across diverse sectors.</p>
         </div>
 
-        <div className="industries-accordion-wrapper" style={{ 
-          display: 'flex', 
-          height: '500px', 
-          width: '100%', 
-          backgroundColor: '#f5f5f5',
-          borderRadius: '12px',
-          overflow: 'hidden',
-          boxShadow: '0 30px 60px -12px rgba(0,0,0,0.15)'
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(4, 1fr)', 
+          gap: '20px', 
+          width: '100%' 
         }}>
-          {industries.map((ind, index) => {
-            const isActive = activeInd === index;
-            return (
+          {industries.map((ind, index) => (
+            <div 
+              key={index}
+              className="industry-grid-card"
+              style={{ 
+                height: '380px', // Increased height for more image dominance
+                borderRadius: '16px',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                transition: 'all 0.4s ease',
+                cursor: 'pointer'
+              }}
+            >
+              {/* Image Layer */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundImage: `url(${ind.img})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                transition: 'transform 0.6s ease'
+              }} className="card-bg" />
+              
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'rgba(0,0,0,0.15)',
+                zIndex: 1
+              }} />
+
+              {/* Floating Content Card (Overlay) - Smaller than image card */}
               <div 
-                key={index}
-                onClick={() => setActiveInd(index)}
-                style={{ 
-                  flex: isActive ? '10' : '1',
-                  minWidth: isActive ? 'auto' : '45px',
-                  cursor: 'pointer',
-                  position: 'relative',
-                  transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
-                  backgroundColor: isActive ? '#FF5722' : index % 2 === 0 ? '#ebebeb' : '#e0e0e0',
+                className="floating-content-card"
+                style={{
+                  position: 'absolute',
+                  bottom: '25px', // Increased from 10px
+                  left: '20px',   // Increased from 10px
+                  right: '20px',  // Increased from 10px
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  padding: '18px',
+                  borderRadius: '12px',
+                  zIndex: 2,
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.12)',
+                  transition: 'all 0.3s ease',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.3)',
                   display: 'flex',
                   flexDirection: 'column',
-                  borderRight: index === industries.length - 1 ? 'none' : '1px solid rgba(0,0,0,0.05)',
-                  backgroundImage: `url(${ind.img})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
+                  justifyContent: 'flex-start'
                 }}
               >
-                {/* Overlay for non-active items in desktop accordion */}
-                {!isActive && (
-                  <div className="accordion-overlay" style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundColor: 'rgba(235, 235, 235, 0.85)',
-                    zIndex: 2,
-                    transition: 'opacity 0.5s'
-                  }} />
-                )}
-
-                {/* Number Label At Top (Strips) */}
-                <div style={{ 
-                  padding: '20px 0', 
-                  textAlign: 'center', 
-                  fontSize: '22px', 
-                  fontWeight: '800', 
-                  color: isActive ? '#fff' : '#333',
-                  opacity: 0.9,
-                  zIndex: 10,
-                  position: 'relative'
-                }}>
-                  {index + 1}
-                </div>
-
-                {/* Content Area */}
-                <div className={`accordion-content-area ${isActive ? 'active' : ''}`} style={{ 
-                  position: 'absolute', 
-                  top: 0, 
-                  left: 0, 
-                  width: '100%', 
-                  height: '100%',
-                  display: isActive ? 'block' : 'none',
-                  zIndex: 5
-                }}>
-                  {/* Orange Sidebar Indicator (Clean) */}
-                  <div style={{ 
-                    position: 'absolute', 
-                    top: 0, 
-                    left: 0, 
-                    width: '10px', 
-                    height: '100%', 
-                    backgroundColor: '#FF5722', 
-                    zIndex: 2
-                  }} />
-
-                  {/* Overlay Text Card (from image) */}
-                  <div style={{ 
-                    position: 'absolute', 
-                    bottom: '40px', 
-                    left: '80px', 
-                    backgroundColor: 'rgba(245, 245, 245, 0.95)', 
-                    padding: '40px', 
-                    maxWidth: '450px', 
-                    zIndex: 3,
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-                    animation: 'slideUp 0.6s ease-in-out 0.1s both',
-                    backdropFilter: 'blur(5px)'
-                  }}>
-                    <h3 style={{ fontSize: '24px', fontWeight: '800', color: '#011A2F', marginBottom: '15px' }}>{ind.title}</h3>
-                    <p style={{ fontSize: '15px', color: '#444', lineHeight: '1.6', marginBottom: '0' }}>{ind.desc}</p>
-                  </div>
-                </div>
+                  <h3 className="forced-black-text">{ind.title}</h3>
+                  <p style={{ 
+                    fontSize: '15px', 
+                    color: '#000000 !important', 
+                    fontFamily: "'Montserrat', sans-serif",
+                    lineHeight: '1.4', 
+                    margin: 0,
+                    opacity: 1
+                  }} className="forced-black-text">
+                    {ind.desc}
+                  </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes fadeInSlide {
-          from { opacity: 0; transform: translateX(15px); }
-          to { opacity: 1; transform: translateX(0); }
+        .industry-grid-card:hover .card-bg {
+          transform: scale(1.1);
         }
-        @keyframes slideUp {
-          from { opacity: 0; transform: translateY(25px); }
-          to { opacity: 1; transform: translateY(0); }
+        .industry-grid-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.18);
         }
-        .industries-accordion-wrapper:hover > div:not(:hover) {
-          filter: grayscale(0.2) contrast(0.9);
+        .industry-grid-card:hover .floating-content-card {
+          background-color: #ffffff;
+          transform: translateY(-5px);
+        }
+        @media (max-width: 1200px) {
+          .industries-grid-home-section > .container > div:last-child {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+        @media (max-width: 900px) {
+          .industries-grid-home-section > .container > div:last-child {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .industries-grid-home-section > .container > div:last-child {
+            grid-template-columns: 1fr !important;
+          }
         }
       `}} />
     </section>

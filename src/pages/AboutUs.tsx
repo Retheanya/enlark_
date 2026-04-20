@@ -1,53 +1,30 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import aboutImg from '../assets/about.jpg';
 import companyImg from '../assets/company.png';
-import lastImg from '../assets/aboutus_last.png';
+import vacumBg from '../assets/vacum.png';
+import logo from '../assets/logo.png';
 
 const AboutUsPage: React.FC = () => {
   const [showCaps, setShowCaps] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="about-us-container" style={{ backgroundColor: '#fff' }}>
       {/* Hero Section */}
-      <section className="about-hero" style={{ 
-        position: 'relative', 
-        height: '35vh', 
-        minHeight: '350px',
-        display: 'flex',
-        alignItems: 'center',
-        background: `linear-gradient(rgba(1, 26, 47, 0.7), rgba(1, 26, 47, 0.7)), url(${aboutImg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: '#fff',
-        textAlign: 'center'
-      }}>
+      <section className="products-top" style={{ marginBottom: '15px' }}>
         <div className="container">
-          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 auto 20px' }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Our Story
+          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 auto 15px' }}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Who We Are
           </div>
-          <h1 style={{ 
-            fontSize: '48px', 
-            fontWeight: '800', 
-            marginBottom: '20px',
-            textTransform: 'uppercase',
-            letterSpacing: '2px',
-            color: '#fff'
-          }}>About Enlark</h1>
-          <p className="hero-text-white" style={{ 
-            fontSize: '22px', 
-            maxWidth: '800px', 
-            margin: '0 auto',
-            lineHeight: '1.6',
-            fontWeight: '400'
-          }}>
-            Durable and Efficient Vacuum Pumps of high quality and prompt service support.
-          </p>
+          <h1 className="products-title">About Enlark Enterprises Private Limited</h1>
+          <p className="products-subtitle">Durable and Efficient Vacuum Pumps of high quality and prompt service support.</p>
         </div>
       </section>
 
       {/* Our Vision Section - Small Rectangular Card */}
-      <section className="vision-section" style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+      <section className="vision-section" style={{ padding: '40px 0', backgroundColor: '#fff' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="vision-card-premium responsive-vision-card" style={{ 
             width: '100%',
@@ -105,7 +82,7 @@ const AboutUsPage: React.FC = () => {
 
       {/* Our Mission Section - Offset Background Block Layout (Reference: Image 1) */}
       <section className="mission-section-premium" style={{ 
-        padding: '120px 0', 
+        padding: '60px 0', 
         backgroundColor: '#fff', 
         position: 'relative', 
         overflow: 'hidden' 
@@ -176,22 +153,22 @@ const AboutUsPage: React.FC = () => {
                 </ul>
               </div>
 
-              <a href="/products" style={{ 
+              <button onClick={() => navigate('/products')} style={{ 
                 display: 'inline-flex', 
                 alignItems: 'center', 
                 gap: '10px', 
-                color: '#089AD3', 
+                color: '#fff', 
                 fontWeight: '700', 
                 fontSize: '16px',
-                border: '2px solid #089AD3',
+                border: 'none',
                 padding: '12px 25px',
                 borderRadius: '8px',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
               }} className="mission-cta">
                 Learn more
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
+              </button>
             </div>
 
             {/* Right Image Column with Offset Overlap */}
@@ -204,7 +181,7 @@ const AboutUsPage: React.FC = () => {
                   position: 'relative',
                   zIndex: 2,
                 }} className="mission-image-wrap">
-                  <img src={aboutImg} alt="Enlark Mission" style={{ width: '100%', display: 'block' }} />
+                  <img src={aboutImg} alt="Enlark Enterprises Private Limited Mission" style={{ width: '100%', display: 'block' }} />
                 </div>
               </div>
             </div>
@@ -215,107 +192,57 @@ const AboutUsPage: React.FC = () => {
 
 
 
-      {/* Company Profile Section - Centered & Compact (Refined Image 3) */}
-      <section className="company-profile-premium" style={{ 
-        padding: '100px 0', 
-        backgroundColor: '#fff',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        {/* Teal Background Panel - Large as in Image 3 */}
-        <div className="responsive-teal-panel" style={{ 
-          position: 'absolute', 
-          top: '0', 
-          bottom: '10%', 
-          right: '0', 
-          width: '50%', 
-          backgroundColor: '#00A7B5', 
-          zIndex: 0 
-        }} />
-
-        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '1000px' }}>
-          <div className="flex-stack-mobile profile-flex-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px', gap: '40px' }}>
+      {/* Company Profile Section - Shape the World (Reference: Image 2) */}
+      <section className="shape-future-section">
+        <div className="shape-future-teal-bg" />
+        <div className="container shape-future-container">
+          <div className="shape-future-wrapper">
             
-            {/* Left Image - Compact */}
-            <div style={{ 
-              flex: '1', 
-              position: 'relative', 
-              zIndex: 2,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <div style={{ 
-                width: '100%', 
-                maxWidth: '420px',
-                boxShadow: '0 30px 60px rgba(0,0,0,0.12)',
-                borderRadius: '12px',
-                overflow: 'hidden'
-              }}>
-                <img src={companyImg} alt="Enlark Company" style={{ width: '100%', height: 'auto', display: 'block' }} />
-              </div>
+            {/* Left Image Column */}
+            <div className="shape-future-image-box">
+              <img src={companyImg} alt="Shape the Vacuum World" />
             </div>
 
-            {/* Right Card - Compact */}
-            <div className="profile-text-col" style={{ 
-              flex: '1', 
-              position: 'relative', 
-              zIndex: 3,
-            }}>
-              <div style={{ 
-                backgroundColor: '#fff', 
-                padding: '40px', 
-                boxShadow: '0 25px 50px rgba(0,0,0,0.06)',
-                borderRadius: '8px',
-                maxWidth: '480px',
-                border: '1px solid rgba(0,0,0,0.03)'
-              }}>
-                <h2 style={{ 
-                  fontSize: '26px', 
-                  color: '#011A2F', 
-                  fontWeight: '800', 
-                  lineHeight: '1.2',
-                  marginBottom: '15px',
-                  textTransform: 'uppercase'
-                }}>Shape the Vacuum World of the Future</h2>
-                
-                <div style={{ fontSize: '15px', color: '#4B5563', lineHeight: '1.7', marginBottom: '25px' }}>
-                  <p style={{ marginBottom: '15px' }}>
-                    <strong>ENLARK</strong> designs and manufactures a broad range of Vacuum Pumps, and Vacuum Systems that cater to varied industries worldwide ranging from Pharmaceuticals, Chemical Processing, Jewellery Making, Food Processing, Packaging Solutions, Automotive, General Engineering, Dairy Farming, Paint Manufacturing, Distillation, Defense Applications, Lab Equipment and many others.
-                  </p>
-                  <p>
-                    With a strong foundation committed to scientific design, precise measurements and global standards, we focus on product quality and precisely meeting the customer needs.
-                  </p>
-                </div>
-
-                <button 
-                  onClick={() => setShowCaps(true)}
-                  style={{ 
-                    display: 'inline-block', 
-                    border: '1.5px solid #FF5722', 
-                    color: '#FF5722', 
-                    padding: '10px 25px', 
-                    fontWeight: '600', 
-                    fontSize: '13px',
-                    textDecoration: 'none',
-                    borderRadius: '4px',
-                    transition: 'all 0.3s ease',
-                    backgroundColor: 'transparent',
-                    cursor: 'pointer'
-                  }}
-                >
-                  See our story &rarr;
-                </button>
+            {/* Right Content Column */}
+            <div className="shape-future-content-box">
+              <h2 style={{ color: '#089AD3' }}>Shape the Vacuum World of the Future</h2>
+              
+              <div className="shape-future-text">
+                <p>
+                  Enlark Enterprises Private Limited designs and manufactures a broad range of Vacuum Pumps, and Vacuum Systems that cater to varied industries worldwide ranging from Pharmaceuticals, Chemical Processing, Jewellery Making, Food Processing, Packaging Solutions, Automotive, General Engineering, Dairy Farming, Paint Manufacturing, , Distillation, Defense Applications, Lab Equipment and many others. 
+                </p>
+                <p>
+                  With a strong foundation committed to scientific design, precise measurements and global standards, we focus on product quality and precisely meeting the customer needs. 
+                </p>
               </div>
+
+              <button 
+                onClick={() => setShowCaps(true)}
+                className="see-story-btn"
+                style={{ 
+                  display: 'inline-block', 
+                  padding: '12px 30px', 
+                  fontWeight: '700', 
+                  fontSize: '14px',
+                  textDecoration: 'none',
+                  borderRadius: '4px',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  border: 'none',
+                  marginTop: '15px'
+                }}
+              >
+                Product Range →
+              </button>
             </div>
 
           </div>
         </div>
-
+      </section>
         {/* Glassmorphism Overlay Toggle */}
         {showCaps && (
           <div style={{
-            position: 'absolute',
+            position: 'fixed',
             top: 0,
             left: 0,
             width: '100%',
@@ -341,6 +268,7 @@ const AboutUsPage: React.FC = () => {
               position: 'relative'
             }}>
               <button 
+                className="no-theme-btn"
                 onClick={() => setShowCaps(false)}
                 style={{
                   position: 'absolute',
@@ -383,61 +311,77 @@ const AboutUsPage: React.FC = () => {
             </div>
           </div>
         )}
-      </section>
-
 
       {/* Final Quote/Service Section - Refined Layout (Reference: Image 2) */}
       <section style={{ 
-        padding: '80px 0', 
-        backgroundColor: '#fff'
+        padding: '60px 0'
       }}>
         <div className="container" style={{ 
           display: 'flex', 
           alignItems: 'stretch', 
           overflow: 'hidden', 
-          minHeight: '240px',
+          minHeight: '320px',
           padding: '0',
-          maxWidth: '1200px'
+          maxWidth: '1200px',
+          backgroundImage: `url(${vacumBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          borderRadius: '16px',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
         }}>
-          {/* Left Teal Block - Lengthier Card */}
+          {/* Text Overlay - Background removed as requested */}
           <div className="quote-teal-col" style={{ 
-            flex: '2', 
-            backgroundColor: '#00A7B5', 
-            padding: '40px 60px', 
+            flex: '2.5', 
+            padding: '60px 80px', 
             display: 'flex', 
             flexDirection: 'column', 
             justifyContent: 'center',
             alignItems: 'flex-start',
             color: '#fff'
           }}>
-            <p className="final-quote-text" style={{ 
-              marginBottom: '35px', 
-              maxWidth: '800px',
-              textAlign: 'left'
+            <h3 style={{ 
+              fontSize: '25px', 
+              fontFamily: "'Poppins', sans-serif",
+              marginBottom: '50px', 
+              maxWidth: '1000px',
+              textAlign: 'left',
+              lineHeight: '1.4',
+              fontWeight: '700',
+              color: '#011A2F' /* Darker color for readability on image */
             }}>
               We focus on product quality and precisely meeting the customer needs through scientific design and global standards.
-            </p>
-            <a href="/contact" className="final-quote-text" style={{ 
-              display: 'inline-block', 
-              border: '1.5px solid #fff', 
-              padding: '12px 35px', 
-              fontWeight: '700', 
-              textDecoration: 'none',
-              fontSize: '13px',
-              transition: 'all 0.3s ease'
-            }}>
+            </h3>
+
+            <button 
+              onClick={() => navigate('/contact')}
+              className="final-quote-text" 
+              style={{ 
+                display: 'inline-block', 
+                backgroundColor: '#089AD3',
+                border: 'none', 
+                padding: '14px 40px', 
+                fontWeight: '700', 
+                textDecoration: 'none',
+                fontSize: '15px',
+                transition: 'all 0.3s ease',
+                color: '#fff',
+                borderRadius: '6px',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                cursor: 'pointer'
+              }}
+            >
               Contact Us &rarr;
-            </a>
+            </button>
           </div>
 
           <div className="quote-image-col" style={{ 
             flex: '1', 
-            backgroundColor: '#fff',
             display: 'flex', 
             alignItems: 'center', 
-            justifyContent: 'center'
+            justifyContent: 'center',
+            padding: '40px'
           }}>
-            <img src={lastImg} alt="Enlark Excellence" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={logo} alt="Enlark Logo" style={{ maxWidth: '220px', height: 'auto', opacity: 0.9 }} />
           </div>
         </div>
       </section>

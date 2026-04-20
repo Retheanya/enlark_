@@ -2,7 +2,7 @@ import { COMPANY } from '../config/company';
 
 export function ContactPage() {
   return (
-    <div className="contact-premium-page" style={{ backgroundColor: '#f8f9fa', minHeight: 'auto', paddingTop: '80px', paddingBottom: '60px' }}>
+    <div className="contact-premium-page" style={{ backgroundColor: '#f8f9fa', minHeight: 'auto', paddingTop: '40px', paddingBottom: '30px' }}>
       <div className="container" style={{ maxWidth: '1100px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 650px) 1fr', gap: '40px', position: 'relative' }}>
           
@@ -15,7 +15,22 @@ export function ContactPage() {
               <h2 style={{ fontSize: '24px', fontWeight: '800', color: '#333', margin: 0, fontFamily: "'Montserrat', sans-serif" }}>Contact Form</h2>
             </div>
 
-            <form className="enlark-premium-form" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }} action={`mailto:${COMPANY.email}`} method="post" encType="text/plain">
+            <form 
+              className="enlark-premium-form" 
+              style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const name = formData.get('Name');
+                const email = formData.get('Email');
+                const phone = formData.get('Phone');
+                const company = formData.get('Company');
+                const message = formData.get('Message');
+                
+                const mailtoUrl = `mailto:${COMPANY.email}?subject=New Inquiry from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0AMessage: ${message}`;
+                window.location.href = mailtoUrl;
+              }}
+            >
               
               <div className="form-group" style={{ margin: '18px 0' }}>
                 <label style={{ display: 'block', fontWeight: '700', marginBottom: '5px' }}>Name <span style={{ color: '#ff5722' }}>*</span></label>

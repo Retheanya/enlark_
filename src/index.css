@@ -13,7 +13,7 @@
   --heading-weight: 800;
   /* Global paragraph/content standard (strict) */
   --content-color: #000000;
-  --content-size: 17.5px;
+  --content-size: 15px;
   --p-size: 15px;
   --content-paragraph-margin-y: 18px;
   --content-list-padding-left: 20px;
@@ -121,6 +121,11 @@ h1, h2, h3, h4, h5, h6,
   font-weight: var(--heading-weight) !important;
 }
 
+h3 {
+  font-size: 25px !important;
+  font-family: var(--font-family) !important;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -154,11 +159,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #E0F2FE;
-  color: #089AD3;
-  padding: 6px 14px;
+  background-color: #8BC34A !important; /* Brand green background */
+  color: white !important; /* White font */
+  padding: 4px 12px;
   border-radius: 50px;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -235,4 +240,44 @@ html body .mission-text-black strong {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* UNIVERSAL BUTTON STYLING */
+button:not(.nav-hamburger):not(.no-theme-btn),
+.btn,
+.read-more-btn,
+.back-btn,
+.quote-btn,
+.submit-btn,
+.explore-more-btn,
+.mission-cta,
+a.final-quote-text[href="/contact"] {
+  background-color: #089AD3 !important;
+  color: #ffffff !important;
+  border-color: #089AD3 !important;
+}
+
+button:not(.nav-hamburger):not(.no-theme-btn):hover,
+.btn:hover,
+.read-more-btn:hover,
+.back-btn:hover,
+.quote-btn:hover,
+.submit-btn:hover,
+.explore-more-btn:hover,
+.mission-cta:hover,
+a.final-quote-text[href="/contact"]:hover {
+  background-color: #014A7F !important;
+  color: #ffffff !important;
+  border-color: #014A7F !important;
+}
+
+/* Industry titles - 17px Montserrat Blue, Case Sensitive */
+.industry-grid-card h3,
+.industry-grid-card-main h3,
+h3.forced-black-text {
+  color: #089AD3 !important;
+  font-size: 17px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
 }

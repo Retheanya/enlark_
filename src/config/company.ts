@@ -1,6 +1,6 @@
 export const COMPANY = {
-  nameLong: 'Enlark',
-  nameShort: 'Enlark',
+  nameLong: 'Enlark Enterprises Private Limited',
+  nameShort: 'Enlark Enterprises Private Limited',
   address:
     '610/1A, Vadakku Thottam, L & T Campus Road, Malumichampatti, Coimbatore, Tamil Nadu 641050',
   phoneDisplay: '+91 73382 84639',

@@ -14,7 +14,7 @@ export function ProductsPage() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             Discovery & Precision
           </div>
-          <h1 className="products-title">Enlark Vacuum Pumps</h1>
+          <h1 className="products-title">Enlark Enterprises Private Limited Vacuum Pumps</h1>
           <p className="products-subtitle">Precision Engineered Vacuum Solutions for Global Industries</p>
         </div>
       </div>
@@ -52,14 +52,14 @@ export function ProductsPage() {
       <style dangerouslySetInnerHTML={{ __html: `
         .products-page {
           background: #f8f9fa;
-          padding-bottom: 80px;
+          padding-bottom: 40px;
         }
         .products-top {
           background: linear-gradient(135deg, #1b5b7a 0%, #26a4df 100%);
           color: white;
-          padding: 60px 0;
+          padding: 30px 0;
           text-align: center;
-          margin-bottom: 30px;
+          margin-bottom: 15px;
         }
         .products-title {
           font-size: 42px;
@@ -75,7 +75,7 @@ export function ProductsPage() {
           color: white;
         }
         .product-category-section {
-          margin-bottom: 50px;
+          margin-bottom: 25px;
         }
         .category-heading {
           font-size: 24px;

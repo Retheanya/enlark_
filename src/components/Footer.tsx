@@ -4,18 +4,19 @@ import { COMPANY } from '../config/company';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ backgroundColor: '#d8d8d8' }}>
       <div className="container footer-grid">
         <div className="footer-col about-col">
           <div className="footer-logo">
-            <img src={logo} alt="Enlark Logo" className="logo-white" />
+            <img src={logo} alt="Enlark Enterprises Private Limited Logo" className="logo-white" />
           </div>
           <p className="footer-desc">
-            Enlark - With the team of Engineer-Directors, Technical, Marketing and Management personnels, is on the wheels of targetted success and achievements.
+            Enlark Enterprises Private Limited - With the team of Engineer-Directors, Technical, Marketing and Management personnels, is on the wheels of targetted success and achievements.
           </p>
         </div>
 
         <div className="footer-col">
+          <h3 className="footer-header">Quick Links</h3>
           <ul className="footer-links">
             <li>
               <NavLink to="/">Home</NavLink>
@@ -24,18 +25,25 @@ function Footer() {
               <NavLink to="/about-us">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="/products">Products</NavLink>
-            </li>
-            <li>
-              <NavLink to="/industries">Industries We Serve</NavLink>
-            </li>
-            <li>
               <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>
         </div>
 
         <div className="footer-col">
+          <h3 className="footer-header">Our Services</h3>
+          <ul className="footer-links">
+            <li>
+              <NavLink to="/products">Products</NavLink>
+            </li>
+            <li>
+              <NavLink to="/industries">Industries We Serve</NavLink>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h3 className="footer-header">Reach Us</h3>
           <ul className="footer-address">
             <li>
               <div className="icon-wrap">
