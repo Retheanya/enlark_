@@ -4,8 +4,8 @@ import { COMPANY } from '../config/company';
 
 function Footer() {
   return (
-    <footer className="footer" style={{ backgroundColor: '#d8d8d8' }}>
-      <div className="container footer-grid">
+    <footer className="footer" style={{ backgroundColor: '#d8d8d8', borderTop: '1px solid #e1e4e8' }}>
+      <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1.4fr 1.2fr', gap: '30px', paddingBottom: '40px' }}>
         <div className="footer-col about-col">
           <div className="footer-logo">
             <img src={logo} alt="Enlark Enterprises Private Limited Logo" className="logo-white" />
@@ -18,35 +18,19 @@ function Footer() {
         <div className="footer-col">
           <h3 className="footer-header">Quick Links</h3>
           <ul className="footer-links">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about-us">About Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact Us</NavLink>
-            </li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about-us">About Us</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/industries">Industries We Serve</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li>
           </ul>
         </div>
 
         <div className="footer-col">
-          <h3 className="footer-header">Our Services</h3>
-          <ul className="footer-links">
-            <li>
-              <NavLink to="/products">Products</NavLink>
-            </li>
-            <li>
-              <NavLink to="/industries">Industries We Serve</NavLink>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer-col">
-          <h3 className="footer-header">Reach Us</h3>
+          <h3 className="footer-header" style={{ marginLeft: '40px' }}>Reach Us</h3>
           <ul className="footer-address">
             <li>
-              <div className="icon-wrap">
+              <div className="icon-wrap" style={{ color: '#089ADE' }}>
                 <svg
                   width="24"
                   height="24"
@@ -58,13 +42,12 @@ function Footer() {
                   strokeLinejoin="round"
                 >
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
               <span>{COMPANY.address}</span>
             </li>
             <li>
-              <div className="icon-wrap">
+              <div className="icon-wrap" style={{ color: '#089ADE' }}>
                 <svg
                   width="20"
                   height="20"
@@ -81,7 +64,7 @@ function Footer() {
               <span>{COMPANY.phoneDisplay}</span>
             </li>
             <li>
-              <div className="icon-wrap">
+              <div className="icon-wrap" style={{ color: '#089ADE' }}>
                 <svg
                   width="20"
                   height="20"
@@ -99,7 +82,7 @@ function Footer() {
               <span>{COMPANY.email}</span>
             </li>
             <li>
-              <div className="icon-wrap">
+              <div className="icon-wrap" style={{ color: '#089ADE' }}>
                 <svg
                   width="20"
                   height="20"
@@ -110,8 +93,6 @@ function Footer() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M2 12h20" />
                   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                 </svg>
               </div>
@@ -126,7 +107,7 @@ function Footer() {
               src={COMPANY.mapEmbedSrc}
               width="100%"
               height="240"
-              style={{ border: 0, borderRadius: '4px' }}
+              style={{ border: 'none', borderRadius: '0' }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -135,8 +116,11 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container">
-          <p>{`${COMPANY.nameShort} © 2026 All Rights Reserved`}</p>
+        <div className="container footer-bottom-container">
+          <p className="copyright-text">{`${COMPANY.nameShort} © 2026 All Rights Reserved`}</p>
+          <p className="credits-text">
+            MADE WITH <span className="heart-icon">❤</span> BY <span className="technovuz-name">TECHNOVUZ</span>
+          </p>
         </div>
       </div>
     </footer>

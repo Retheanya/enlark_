@@ -10,16 +10,21 @@
   border-bottom: 1px solid #eee;
 }
 
+.top-header .container {
+  max-width: 95% !important;
+}
+
+
 .flex-end {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  padding-right: 5px; /* Slightly move to the right */
+  padding-right: 45px; /* Increased to align perfectly with the end of Contact Us link */
 }
 
 .contact-info {
   font-size: 15px; /* Fixed at 15px as requested */
-  font-weight: 500;
+  font-weight: 700; /* Made bolder as requested */
   color: var(--primary-dark-blue);
   display: flex;
   gap: 25px;
@@ -1015,7 +1020,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr 1.4fr 1.2fr;
   gap: 30px;
   padding-bottom: 50px;
 }
@@ -1025,7 +1030,6 @@
   font-weight: 700;
   margin-bottom: 25px;
   color: #1b5b7a !important; /* Dark blue for light footer */
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -1132,8 +1136,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 50%;
+  border: none !important;
+  border-radius: 0 !important;
+  color: #089ADE !important;
+}
+
+.icon-wrap svg {
+  color: #089ADE !important;
+  stroke: #089ADE !important;
 }
 
 .footer-address span {
@@ -1158,6 +1168,41 @@
   font-size: 14px;
   color: white;
   font-weight: 500;
+  margin: 0;
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.credits-text {
+  font-size: 10px !important;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.9);
+}
+
+.technovuz-name {
+  font-weight: 800;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+  }
+  
+  .credits-text {
+    font-size: 9px !important;
+  }
 }
 
 /* Force footer text color (overrides global strict rules) */

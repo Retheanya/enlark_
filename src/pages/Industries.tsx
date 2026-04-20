@@ -12,18 +12,18 @@ import defImg from '../assets/defense_applications.jpeg';
 import labImg from '../assets/lab_equipment.png';
 
 const industries = [
-  { title: 'Pharmaceuticals', img: pharmImg, desc: 'Precision vacuum solutions for laboratory and production-scale pharmaceutical manufacturing.' },
-  { title: 'Chemical Processing', img: chemImg, desc: 'Durable pumps designed to handle corrosive and aggressive chemical environments.' },
-  { title: 'Jewellery Making', img: jewelImg, desc: 'Specialized vacuum casting solutions for intricate jewelry designs and precision finishing.' },
-  { title: 'Food Processing', img: foodImg, desc: 'Hygienic vacuum systems for packaging, de-aeration, and processing applications.' },
-  { title: 'Packaging Solutions', img: packImg, desc: 'High-speed vacuum systems for chamber packaging and modified atmosphere solutions.' },
-  { title: 'Automotive', img: autoImg, desc: 'Reliable vacuum support for automotive component manufacturing and testing.' },
-  { title: 'General Engineering', img: engImg, desc: 'Versatile vacuum technology for a wide range of industrial manufacturing processes.' },
-  { title: 'Dairy Farming', img: dairyImg, desc: 'Efficient milking machine vacuum pumps for modern dairy management and hygiene.' },
-  { title: 'Paint Manufacturing', img: paintImg, desc: 'Vacuum systems for pigment processing and high-quality paint production lines.' },
-  { title: 'Distillation', img: distImg, desc: 'Critical vacuum control for industrial and laboratory-scale distillation processes.' },
-  { title: 'Defense Applications', img: defImg, desc: 'High-performance vacuum solutions meeting rigorous defense and aerospace standards.' },
-  { title: 'Lab Equipment', img: labImg, desc: 'Precision bench-top and integrated laboratory vacuum pumps for scientific research.' },
+  { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum solutions for pharma production.' },
+  { title: 'Chemical Processing', img: chemImg, desc: 'Corrosive-duty pumps.' },
+  { title: 'Jewellery Making', img: jewelImg, desc: 'Precision vacuum for casting.' },
+  { title: 'Food Processing', img: foodImg, desc: 'Hygienic vacuum systems.' },
+  { title: 'Packaging Solutions', img: packImg, desc: 'High-speed vacuum.' },
+  { title: 'Automotive', img: autoImg, desc: 'Testing & assembly vacuum.' },
+  { title: 'General Engineering', img: engImg, desc: 'Versatile industrial vacuum.' },
+  { title: 'Dairy Farming', img: dairyImg, desc: 'Milking vacuum systems.' },
+  { title: 'Paint Manufacturing', img: paintImg, desc: 'Vacuum for paint processing.' },
+  { title: 'Distillation', img: distImg, desc: 'Controlled vacuum distillation.' },
+  { title: 'Defense Applications', img: defImg, desc: 'High-performance vacuum.' },
+  { title: 'Lab Equipment', img: labImg, desc: 'Lab-grade vacuum solutions.' },
 ];
 
 export function IndustriesPage() {
@@ -53,7 +53,7 @@ export function IndustriesPage() {
                 key={index}
                 className="industry-grid-card-main"
                 style={{ 
-                  height: '380px',
+                  aspectRatio: '1/1',
                   borderRadius: '20px',
                   overflow: 'hidden',
                   position: 'relative',
@@ -89,32 +89,40 @@ export function IndustriesPage() {
                   className="floating-info-card"
                   style={{
                     position: 'absolute',
-                    bottom: '25px',
-                    left: '20px',
-                    right: '20px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                    padding: '12px 18px',
-                    borderRadius: '16px',
+                    bottom: '10px',
+                    left: '10px',
+                    right: '10px',
+                    width: 'auto',
+                    height: '110px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                    padding: '10px 12px',
+                    borderRadius: '12px',
                     zIndex: 2,
-                    boxShadow: '0 15px 30px rgba(0,0,0,0.12)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
                     transition: 'all 0.3s ease',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255,255,255,0.4)',
+                    backdropFilter: 'blur(15px)',
+                    WebkitBackdropFilter: 'blur(15px)',
+                    border: '1px solid rgba(255,255,255,0.2)',
                     textAlign: 'left',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'flex-start'
+                    justifyContent: 'center',
+                    gap: '4px'
                   }}
                 >
-                  <h3 className="forced-black-text">{ind.title}</h3>
+                  <h3 style={{ color: '#ffffff', margin: '0', fontSize: '15px' }}>{ind.title}</h3>
                   <p style={{ 
-                    fontSize: '15px', 
-                    color: '#000000 !important', 
+                    fontSize: '11.5px', 
+                    color: '#ffffff', 
                     fontFamily: "'Montserrat', sans-serif",
-                    lineHeight: '1.4', 
+                    lineHeight: '1.3', 
                     margin: 0,
-                    opacity: 1
-                  }} className="forced-black-text">
+                    opacity: 0.95,
+                    display: '-webkit-box',
+                    WebkitLineClamp: '2',
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  }}>
                     {ind.desc}
                   </p>
                 </div>

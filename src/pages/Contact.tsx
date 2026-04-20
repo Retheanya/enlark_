@@ -78,10 +78,10 @@ export function ContactPage() {
             {/* The Thick Teal Sidebar Background */}
             <div style={{ 
               position: 'absolute', 
-              top: '5%', 
+              top: '40px', 
               right: '-60px', 
               width: '320px', 
-              height: '105%', 
+              bottom: '40px', /* Uses bottom instead of height to respect container padding */
               backgroundColor: '#00838F', 
               zIndex: 0 
             }} />

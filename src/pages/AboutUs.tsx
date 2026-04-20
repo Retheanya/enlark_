@@ -220,7 +220,9 @@ const AboutUsPage: React.FC = () => {
                 onClick={() => setShowCaps(true)}
                 className="see-story-btn"
                 style={{ 
-                  display: 'inline-block', 
+                  display: 'inline-flex', 
+                  alignItems: 'center',
+                  gap: '10px',
                   padding: '12px 30px', 
                   fontWeight: '700', 
                   fontSize: '14px',
@@ -232,7 +234,8 @@ const AboutUsPage: React.FC = () => {
                   marginTop: '15px'
                 }}
               >
-                Product Range →
+                Product Range
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </div>
 
@@ -356,7 +359,9 @@ const AboutUsPage: React.FC = () => {
               onClick={() => navigate('/contact')}
               className="final-quote-text" 
               style={{ 
-                display: 'inline-block', 
+                display: 'inline-flex', 
+                alignItems: 'center',
+                gap: '10px',
                 backgroundColor: '#089AD3',
                 border: 'none', 
                 padding: '14px 40px', 
@@ -370,7 +375,8 @@ const AboutUsPage: React.FC = () => {
                 cursor: 'pointer'
               }}
             >
-              Contact Us &rarr;
+              Contact Us
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </button>
           </div>
 
