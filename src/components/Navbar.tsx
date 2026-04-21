@@ -17,26 +17,35 @@ export function Navbar() {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-inner">
-          <div className="logo-section" style={{ marginLeft: '-45px' }}>
+          <div className="logo-section">
             <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
               <img src={logo} alt="Enlark Logo" className="logo" />
               <div className="company-branding">
-                <span className="brand-name">Enlark Enterprises Private Limited</span>
-                <span className="brand-iso">(an ISO 9001: 2015 COMPANY)</span>
+                <span className="brand-name">ENLARK ENTERPRISES PVT. LTD.</span>
+                <span className="brand-iso">(AN ISO 9001: 2015 COMPANY)</span>
               </div>
             </NavLink>
           </div>
 
           <button
             type="button"
-            className="nav-hamburger"
+            className={`nav-hamburger ${isMenuOpen ? 'open' : ''}`}
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((v) => !v)}
           >
-            <span className="nav-hamburger-bar" />
-            <span className="nav-hamburger-bar" />
-            <span className="nav-hamburger-bar" />
+            {isMenuOpen ? (
+              <svg viewBox="0 0 24 24" width="28" height="28" stroke="#000000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" width="28" height="28" stroke="#000000" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            )}
           </button>
 
           <div className="nav-links-container">

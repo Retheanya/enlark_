@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import hero1 from '../assets/01.Rotary Vane Pumps – Single Stage Oil Immersed Direct Drive/01.Rotary Vane Pumps – Single Stage Oil Immersed Direct Drive.jpg';
-import hero2 from '../assets/07.Water Ring Pumps – Single Stage Direct Drive/01.Water Ring Pumps – Single Stage Direct Drive.jpg';
-import hero3 from '../assets/05.Belt Drive Pumps – Oil Lubricated/04.Belt Drive Pumps – Oil Lubricated.jpg';
+import carousel1 from '../assets/carousel1.png';
+import carousel2 from '../assets/carousel2.png';
+import carousel3 from '../assets/carousel3.png';
 import vacumBg from '../assets/vacum.png';
 import accessoryImg from '../assets/14.Milking Machine Accessories/02..Milking Machine Accessories.jpg';
 import pharmImg from '../assets/pharmaceuticals.jpeg';
@@ -23,12 +23,12 @@ import { COMPANY } from '../config/company';
 
 function Hero() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  const slides = [hero1, hero2, hero3];
+  const slides = [carousel1, carousel2, carousel3];
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -50,9 +50,14 @@ function Hero() {
 
         <div className="carousel-dots">
           {slides.map((_, index) => (
-            <span key={index} className={`dot ${index === currentSlide ? 'active' : ''}`} onClick={() => setCurrentSlide(index)} />
+            <div
+              key={index}
+              className={`dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            />
           ))}
         </div>
+
       </div>
     </section>
   );
@@ -64,7 +69,7 @@ function AboutSection() {
       <div className="container flex-between">
         <div className="about-left">
           <div className="badge-container">
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '5px' }}>
               <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 15 L54 6 L64 9 L60 18 A32 32 0 0 1 76 28 L85 24 L90 33 L81 38 A32 32 0 0 1 85 50 L94 54 L91 64 L82 60 A32 32 0 0 1 72 76 L76 85 L67 90 L62 81 A32 32 0 0 1 50 85 L46 94 L36 91 L40 82 A32 32 0 0 1 24 72 L15 76 L10 67 L19 62 A32 32 0 0 1 15 50 L6 46 L9 36 L18 40 A32 32 0 0 1 28 24 L24 15 L33 10 L38 19 A32 32 0 0 1 50 15 Z" fill="transparent" stroke="#013D8B" strokeWidth="4.5" strokeLinejoin="round"/>
                 <circle cx="50" cy="50" r="23" fill="transparent" stroke="#013D8B" strokeWidth="3" />
@@ -114,10 +119,10 @@ function DetailedAboutSection() {
       }} />
 
       <div className="container" style={{ padding: '40px 15px', position: 'relative', zIndex: 1 }}>
-        <div className="flex-stack-mobile" style={{ display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className="flex-stack-mobile about-detail-flex" style={{ display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>
           
           {/* Left Side: Professional Text Content */}
-          <div style={{ flex: '1', minWidth: '350px' }}>
+          <div className="about-detail-text" style={{ flex: '1', minWidth: '300px' }}>
             <div className="premium-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               OUR COMPANY
@@ -139,7 +144,7 @@ function DetailedAboutSection() {
           </div>
 
           {/* Right Side: Image Layered Above Blue Block */}
-          <div style={{ flex: '1.5', minWidth: '350px', display: 'flex', justifyContent: 'center' }}>
+          <div className="about-detail-image-wrap" style={{ flex: '1.5', minWidth: '300px', display: 'flex', justifyContent: 'center' }}>
             <div style={{ position: 'relative', width: '100%', maxWidth: '850px' }}>
               <div style={{ 
                 position: 'relative', 
@@ -148,7 +153,7 @@ function DetailedAboutSection() {
                 overflow: 'hidden', 
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.3)',
                 height: '100%',
-                minHeight: '450px'
+                minHeight: '400px'
               }} className="responsive-image-wrap">
                 <img 
                   src={accessoryImg} 

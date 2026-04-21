@@ -96,7 +96,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Phone call</h3>
-                    <p style={{ fontWeight: '800', color: '#ff5722', margin: 0 }}>{COMPANY.phoneDisplay}</p>
+                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>{COMPANY.phoneDisplay}</p>
                   </div>
                 </div>
               </a>
@@ -109,7 +109,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
-                    <p style={{ fontWeight: '800', color: '#ff5722', margin: 0 }}>{COMPANY.email}</p>
+                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>{COMPANY.email}</p>
                   </div>
                 </div>
               </a>
@@ -122,7 +122,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>WhatsApp</h3>
-                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>Chat with us →</p>
+                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>Chat with us </p>
                   </div>
                 </div>
               </a>

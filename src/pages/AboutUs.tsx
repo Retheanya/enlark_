@@ -14,7 +14,7 @@ const AboutUsPage: React.FC = () => {
       {/* Hero Section */}
       <section className="products-top" style={{ marginBottom: '15px' }}>
         <div className="container">
-          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 auto 15px' }}>
+          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             Who We Are
           </div>
@@ -37,8 +37,8 @@ const AboutUsPage: React.FC = () => {
             boxShadow: '0 20px 40px rgba(0,0,0,0.03)',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center',
+            alignItems: 'flex-start',
+            textAlign: 'left',
             border: '1px solid rgba(8, 154, 211, 0.1)'
           }}>
             {/* Geometric Shapes Background - Grey & Charcoal */}
@@ -286,7 +286,7 @@ const AboutUsPage: React.FC = () => {
               >
                 &times;
               </button>
-              <h3 style={{ fontSize: '24px', color: '#011A2F', marginBottom: '30px', fontWeight: '800', textAlign: 'center' }}>Technological Capabilities</h3>
+              <h3 style={{ fontSize: '24px', color: '#011A2F', marginBottom: '30px', fontWeight: '800', textAlign: 'left' }}>Technological Capabilities</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {[
                   'Rotary Vane, Water Ring, Diaphragm, and Piston Pumps.',

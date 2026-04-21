@@ -10,7 +10,7 @@ export function ProductsPage() {
     <div className="products-page">
       <div className="products-top">
         <div className="container">
-          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 auto 15px' }}>
+          <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             Discovery & Precision
           </div>
@@ -58,7 +58,7 @@ export function ProductsPage() {
           background: linear-gradient(135deg, #1b5b7a 0%, #26a4df 100%);
           color: white;
           padding: 30px 0;
-          text-align: center;
+          text-align: left;
           margin-bottom: 15px;
         }
         .products-title {

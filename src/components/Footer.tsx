@@ -11,7 +11,7 @@ function Footer() {
             <img src={logo} alt="Enlark Enterprises Private Limited Logo" className="logo-white" />
           </div>
           <p className="footer-desc">
-            Enlark Enterprises Private Limited - With the team of Engineer-Directors, Technical, Marketing and Management personnels, is on the wheels of targetted success and achievements.
+            ENLARK ENTERPRISES - With the team of Engineer-Directors, Technical, Marketing and Management personnels, is on the wheels of targetted success and achievements.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h3 className="footer-header" style={{ marginLeft: '40px' }}>Reach Us</h3>
+          <h3 className="footer-header">Reach Us</h3>
           <ul className="footer-address">
             <li>
               <div className="icon-wrap" style={{ color: '#089ADE' }}>
@@ -119,7 +119,7 @@ function Footer() {
         <div className="container footer-bottom-container">
           <p className="copyright-text">{`${COMPANY.nameShort} © 2026 All Rights Reserved`}</p>
           <p className="credits-text">
-            MADE WITH <span className="heart-icon">❤</span> BY <span className="technovuz-name">TECHNOVUZ</span>
+            Made With <span className="heart-icon">❤</span> By <span className="technovuz-name">Technovuz</span>
           </p>
         </div>
       </div>

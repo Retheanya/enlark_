@@ -19,7 +19,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  padding-right: 45px; /* Increased to align perfectly with the end of Contact Us link */
+  padding-right: 22px; /* Adjusted to move content left for perfect alignment with Navbar links */
 }
 
 .contact-info {
@@ -46,8 +46,7 @@
   background: white;
   padding: 0; /* Strictly reduced height */
   box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1000;
 }
 
@@ -70,19 +69,28 @@
 }
 
 .brand-name {
-  font-size: 20px;
-  font-weight: 800;
-  color: #000000 !important; /* Changed to Black */
+  font-size: 15px !important;
+  font-family: var(--content-font-family) !important;
+  font-weight: 700 !important;
+  color: #000000 !important; /* User requested black */
   line-height: 1;
   text-transform: uppercase;
 }
 
 .brand-iso {
-  font-size: 11px;
-  font-weight: 700;
-  color: #000000 !important; /* Changed to Black */
+  font-size: 10px !important;
+  font-family: var(--content-font-family) !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
   margin-top: 2px;
-  text-align: center;
+  text-align: left;
+  width: 100%;
+}
+
+.company-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .nav-links-container {
@@ -189,7 +197,7 @@
 @media (min-width: 1201px) {
   .navbar-inner {
     padding-left: 6px;
-    padding-right: 18px;
+    padding-right: 0;
   }
 }
 
@@ -199,15 +207,15 @@
   width: 100%;
   background-color: var(--background-color);
   overflow: hidden;
-  margin-top: 10px; /* Reduced gap between navbar and carousel */
+  margin-top: 0; /* Removed gap for a modern flush look */
 }
 
 .hero-carousel {
   position: relative;
   width: 100%;
-  height: 600px; /* Aligned with requested height */
-  display: flex;
-  align-items: center;
+  height: 100vh; /* Set to full viewport height as requested */
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
 .carousel-images {
@@ -224,10 +232,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensure full image is viewed without zooming/cropping */
+  object-fit: fill; /* Stretch/squash height only to fit 100vh without cropping width */
+  display: block;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  background-color: #fff; /* Neutral backdrop for product shots */
+  transition: opacity 2s ease-in-out; /* Slower, smoother fade transition */
 }
 
 .carousel-img.active {
@@ -285,13 +293,7 @@
 }
 
 .carousel-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  z-index: 20;
+  display: none !important; /* Removed as requested */
 }
 
 .dot {
@@ -341,7 +343,7 @@
 
 /* About Section */
 .about-section {
-  padding: 40px 0;
+  padding: 80px 0; /* Increased padding for better section separation */
   background-color: white;
 }
 
@@ -352,7 +354,7 @@
 }
 
 .badge-container {
-  text-align: center;
+  text-align: left;
 }
 
 .badge-img {
@@ -1098,7 +1100,8 @@
 
 .footer-links {
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .footer-links li {
@@ -1119,7 +1122,8 @@
 
 .footer-address {
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .footer-address li {
@@ -1179,7 +1183,7 @@
 
 .credits-text {
   font-size: 10px !important;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
   color: rgba(255,255,255,0.9);
 }
 
@@ -1202,6 +1206,7 @@
   
   .credits-text {
     font-size: 9px !important;
+    letter-spacing: 0.2px;
   }
 }
 
@@ -1209,7 +1214,7 @@
 .footer, .footer * {
   color: inherit;
   font-family: var(--content-font-family) !important;
-  font-size: 17.5px !important;
+  font-size: 15px !important;
 }
 
 .footer-grid, .footer-grid * {
@@ -1551,10 +1556,18 @@
   }
   .logo {
     height: 36px;
+    flex-shrink: 0;
   }
   .logo-section {
     gap: 8px;
     margin-left: 0 !important;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: calc(100% - 40px); /* Leave room for hamburger */
+  }
+  .company-branding {
+    flex-shrink: 1;
+    min-width: 0;
   }
 }
 
@@ -1565,41 +1578,78 @@
   }
 
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: min(340px, 86vw);
-    background: white;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.12);
-    padding: 70px 18px 18px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #089AD3; /* Match theme blue */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 0;
     margin: 0;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
     justify-content: flex-start;
-    transform: translateX(110%);
-    transition: transform 220ms ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 220ms ease;
     z-index: 1200;
   }
 
   .nav-links.open {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 0 !important;
   }
 
   .nav-links li a {
-    padding: 12px 10px;
-    border-radius: 6px;
+    padding: 16px 20px;
+    border-radius: 0;
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    text-transform: none !important; /* User requested case sensitive */
+    width: 100%;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
   }
 
   .nav-links li a:hover {
     transform: none;
-    background: rgba(8, 154, 211, 0.08);
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .top-header {
+    display: none !important; /* Hide contact header on mobile */
   }
 
   .nav-hamburger {
-    display: inline-flex;
-    margin-left: auto;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-left: auto !important;
+    height: auto !important;
+    width: auto !important;
+    min-width: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 5px !important;
+    cursor: pointer;
+    position: relative;
+    z-index: 1300;
+    flex-shrink: 0 !important;
+    align-items: center;
+    justify-content: center;
   }
+
+
 
   .nav-mobile-backdrop {
     display: block;
@@ -1623,6 +1673,28 @@
 
   .about-section {
     padding: 30px 0;
+    overflow-x: hidden !important;
+  }
+
+  /* Stack about columns vertically on mobile */
+  .about-section .flex-between {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .about-left {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .about-right {
+    width: 100% !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
   }
 
   .advantages-wrapper {
@@ -1748,12 +1820,12 @@
     font-size: 13px !important;
   }
 
-  .hero {
-    margin-top: 12px;
-  }
-
-  .hero-carousel {
-    height: 320px;
+  /* Center premium badges globally on mobile screens */
+  .premium-badge {
+    display: flex;
+    width: fit-content;
+    margin-left: 0 !important;
+    margin-right: auto !important;
   }
 
   .floating-contact {
@@ -1935,7 +2007,7 @@
   }
 
   .navbar-inner {
-    padding: 10px 15px !important;
+    padding: 22px 15px 10px !important; /* Added gap from top margin */
     gap: 10px !important;
   }
   
@@ -2096,7 +2168,7 @@
     color: white !important;
     font-size: 14px !important;
     margin: 0 !important;
-    text-align: center !important;
+    text-align: left !important;
   }
   
   .industries-accordion-wrapper > div p {
@@ -2137,7 +2209,7 @@
   
   .commitment-container {
     flex-direction: column !important;
-    text-align: center !important;
+    text-align: left !important;
     gap: 30px !important;
   }
   
@@ -2148,6 +2220,25 @@
   /* Text cleanup */
   .main-heading, .section-title, .product-main-title {
     font-size: 28px !important;
+    text-align: left !important;
+  }
+
+  .about-section .flex-between {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .about-left, .about-right {
+    width: 100% !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+
+  .about-section p, .about-section .premium-badge, .about-section .badge-container {
+    text-align: left !important;
+    margin-left: 0 !important;
+    align-items: flex-start !important;
   }
 
   /* AboutUs.tsx New Fixes (Image 1 & 2) */
@@ -2193,8 +2284,8 @@
     font-size: 13px !important;
     justify-content: center !important;
     box-sizing: border-box !important;
-    margin: 25px auto 0 !important;
-    align-self: center !important;
+    margin: 25px 0 0 0 !important;
+    align-self: flex-start !important;
   }
   
   .responsive-mission-title {
@@ -2209,10 +2300,10 @@
     max-width: 100% !important;
     padding: 12px 10px !important;
     font-size: 13px !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     box-sizing: border-box !important;
     display: flex !important;
-    margin: 30px auto 0 !important;
+    margin: 30px 0 0 0 !important;
   }
 
   .mission-list-item {
@@ -2436,7 +2527,7 @@
 .products-top {
   background: linear-gradient(135deg, #1b5b7a 0%, #26a4df 100%) !important;
   padding: 30px 0 !important;
-  text-align: center;
+  text-align: left;
   margin-bottom: 15px;
 }
 
@@ -2460,4 +2551,187 @@
 
 .forced-black-text {
   color: #000000 !important;
+}
+
+/* MOBILE REFINEMENTS - USER REQUESTED */
+@media (max-width: 600px) {
+  /* 1. Hero Carousel - Premium Mobile Design */
+  .hero {
+    background-color: #f8f9fa !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .hero-carousel {
+    height: 35vh !important; /* Fixed height for mobile to maintain aspect ratio */
+    background-color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .carousel-images {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important; /* Revert flex from card layout */
+    padding: 0 !important;
+  }
+
+  .carousel-img {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Preserves baked-in text perfectly */
+    background: #ffffff;
+    opacity: 0 !important;
+    transition: opacity 1.5s ease-in-out !important;
+  }
+
+  .carousel-img.active {
+    opacity: 1 !important;
+  }
+
+  .carousel-dots {
+    display: none !important; /* Hidden as requested */
+  }
+
+  .dot {
+    width: 7px !important;
+    height: 7px !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    margin: 0 4px !important;
+  }
+
+  .dot.active {
+    background-color: #089AD3 !important;
+    transform: scale(1.3) !important;
+  }
+
+  /* 2. Align About Sections Perfectly */
+  .about-section, .about-detail-section {
+    padding: 40px 0 !important;
+    text-align: left !important; /* Left-aligned to match design reference */
+    overflow-x: hidden !important;
+  }
+
+  .about-section .container, .about-detail-section .container {
+    padding: 0 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-left {
+    flex: none !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .about-left .badge-container {
+    text-align: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .about-left .badge-years {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+  }
+
+  .about-left .badge-text.decoration {
+    margin-top: 5px !important;
+  }
+
+  .about-section .flex-between {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .about-right {
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .section-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin-top: 15px !important;
+  }
+
+  /* Detailed About Section Fixes */
+  .about-detail-bg-block {
+    display: none !important; /* Hide the side block on mobile to prevent overflow */
+  }
+
+  .about-detail-flex {
+    gap: 30px !important; /* Reduced from 80px */
+    align-items: flex-start !important;
+  }
+
+  .about-detail-text {
+    min-width: 100% !important;
+    order: 1;
+  }
+
+  .about-detail-image-wrap {
+    min-width: 100% !important;
+    order: 2;
+  }
+
+  .responsive-image-wrap {
+    min-height: 250px !important; /* Smaller on mobile */
+    border-radius: 12px !important;
+  }
+
+  .about-text-content {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Fix badges */
+  .premium-badge {
+    margin: 0 0 15px !important; /* Left-aligned margin */
+    display: inline-flex !important;
+  }
+
+  .badge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-aligned */
+  }
+
+  /* Fix Commitment Banner */
+  .commitment-container {
+    flex-direction: column !important;
+    text-align: left !important; /* Left-aligned */
+    gap: 30px !important;
+  }
+
+  .commitment-banner h3 {
+    font-size: 20px !important; /* Smaller for mobile */
+    line-height: 1.5 !important;
+  }
+
+  /* Fix Product Section */
+  .product-display {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .product-list-container {
+    max-height: 200px !important; /* Shorter scrollable area on mobile */
+  }
+
+  .featured-display {
+    width: 100% !important;
+  }
+
+  .image-main-wrap {
+    height: 250px !important;
+    padding: 20px !important;
+  }
 }
