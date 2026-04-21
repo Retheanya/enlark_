@@ -57,19 +57,25 @@ export function ContactPage() {
                 <textarea name="Message" rows={4} style={{ width: '100%', border: 'none', borderBottom: '2px solid #ddd', padding: '8px 0', outline: 'none', backgroundColor: 'transparent', transition: 'border-color 0.3s' }} required />
               </div>
 
-              <button type="submit" style={{ 
+              <button type="submit" className="submit-btn" style={{ 
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
                 alignSelf: 'flex-start', 
-                backgroundColor: '#00838F', 
+                backgroundColor: '#089AD3', 
                 color: 'white', 
                 border: 'none', 
                 padding: '12px 35px', 
                 fontWeight: '700', 
                 cursor: 'pointer',
                 marginTop: '10px',
-                transition: 'background-color 0.3s'
+                borderRadius: '4px',
+                transition: 'all 0.3s ease'
               }}>
                 Send Message
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
+
             </form>
           </div>
 

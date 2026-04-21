@@ -2276,17 +2276,27 @@
     text-align: left !important;
   }
   
-  .mission-cta {
+  .mission-cta, 
+  .see-story-btn, 
+  .final-quote-text {
+    width: auto !important;
+    min-width: auto !important;
+    max-width: fit-content !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
     display: inline-flex !important;
-    width: 90% !important;
-    max-width: 220px !important;
-    padding: 10px 15px !important;
-    font-size: 13px !important;
-    justify-content: center !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    margin: 20px 0 0 0 !important;
+    border-radius: 4px !important;
     box-sizing: border-box !important;
-    margin: 25px 0 0 0 !important;
-    align-self: flex-start !important;
+    line-height: 1 !important;
+    height: auto !important;
   }
+
+
   
   .responsive-mission-title {
     font-size: 24px !important;
@@ -2295,16 +2305,7 @@
     line-height: 1.1 !important;
   }
   
-  .mission-cta {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 12px 10px !important;
-    font-size: 13px !important;
-    justify-content: flex-start !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    margin: 30px 0 0 0 !important;
-  }
+
 
   .mission-list-item {
     gap: 10px !important;
