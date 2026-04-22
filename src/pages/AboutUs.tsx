@@ -19,7 +19,7 @@ const AboutUsPage: React.FC = () => {
             Who We Are
           </div>
           <h1 className="products-title">About Enlark Enterprises Private Limited</h1>
-          <p className="products-subtitle">Durable And Efficient Vacuum Pumps Of High Quality And Prompt Service Support.</p>
+          <p className="products-subtitle">Durable and efficient vacuum pumps of high quality and prompt service support.</p>
         </div>
       </section>
 
@@ -73,7 +73,7 @@ const AboutUsPage: React.FC = () => {
                 color: '#444',
                 fontWeight: '400'
               }}>
-                Our Vision Is To Be A Trusted Product Manufacturer Of Global Repute With One Stop Solution For All Vacuum Requirements, Known For Quality And Reliability Of All That We Deliver.
+                Our vision is to be a trusted product manufacturer of global repute with one stop solution for all vacuum requirements, known for quality and reliability of all that we deliver.
               </p>
             </div>
           </div>
@@ -209,7 +209,7 @@ const AboutUsPage: React.FC = () => {
               
               <div className="shape-future-text">
                 <p>
-                  Enlark Enterprises Private Limited designs and manufactures a broad range of Vacuum Pumps, and Vacuum Systems that cater to varied industries worldwide ranging from Pharmaceuticals, Chemical Processing, Jewellery Making, Food Processing, Packaging Solutions, Automotive, General Engineering, Dairy Farming, Paint Manufacturing, , Distillation, Defense Applications, Lab Equipment and many others. 
+                  Enlark Enterprises Private Limited designs and manufactures a broad range of vacuum pumps, and vacuum systems that cater to varied industries worldwide ranging from pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment and many others. 
                 </p>
                 <p>
                   With a strong foundation committed to scientific design, precise measurements and global standards, we focus on product quality and precisely meeting the customer needs. 

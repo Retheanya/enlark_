@@ -11,7 +11,7 @@ function Footer() {
             <img src={logo} alt="Enlark Enterprises Private Limited Logo" className="logo-white" />
           </div>
           <p className="footer-desc">
-            ENLARK ENTERPRISES - With the team of Engineer-Directors, Technical, Marketing and Management personnels, is on the wheels of targetted success and achievements.
+            Enlark Enterprises - With the team of engineer-directors, technical, marketing and management personnels, is on the wheels of targetted success and achievements.
           </p>
         </div>
 
@@ -117,9 +117,9 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="container footer-bottom-container">
-          <p className="copyright-text">{`${COMPANY.nameShort} © 2026 All Rights Reserved`}</p>
+          <p className="copyright-text">{`${COMPANY.nameShort} © 2026 all rights reserved`}</p>
           <p className="credits-text">
-            Made With <span className="heart-icon">❤</span> By <a href="https://www.technovuz.com" target="_blank" rel="noopener noreferrer" className="technovuz-name">Technovuz</a>
+            Made with <span className="heart-icon">❤</span> by <a href="https://www.technovuz.com" target="_blank" rel="noopener noreferrer" className="technovuz-name">Technovuz</a>
           </p>
         </div>
       </div>

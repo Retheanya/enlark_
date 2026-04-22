@@ -12,7 +12,7 @@ import defImg from '../assets/defense_applications.jpeg';
 import labImg from '../assets/lab_equipment.png';
 
 const industries = [
-  { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum Solutions For Pharma Production.' },
+  { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum For Pharma Production.' },
   { title: 'Chemical Processing', img: chemImg, desc: 'Corrosive-Duty Pumps.' },
   { title: 'Jewellery Making', img: jewelImg, desc: 'Precision Vacuum For Casting.' },
   { title: 'Food Processing', img: foodImg, desc: 'Hygienic Vacuum Systems.' },
@@ -36,7 +36,7 @@ export function IndustriesPage() {
             Organisations We Serve
           </div>
           <h1 className="products-title">Industries We Serve</h1>
-          <p className="products-subtitle">We Provide Precision-Engineered Vacuum Pump Solutions For A Wide Range Of Industrial Applications Worldwide.</p>
+          <p className="products-subtitle">We provide precision-engineered vacuum pump solutions for a wide range of industrial applications worldwide.</p>
         </div>
       </section>
 

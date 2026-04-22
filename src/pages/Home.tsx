@@ -79,7 +79,7 @@ function AboutSection() {
             </div>
             <p className="badge-years" style={{ letterSpacing: '1px', fontWeight: '800' }}>2019-2026</p>
             <p className="badge-text decoration" style={{ fontWeight: '600' }}>
-              A 5+ Year History Of Quality And Reliability
+              A 5+ year history of quality and reliability
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ function AboutSection() {
           <h2 className="section-title">Welcome To Enlark Enterprises Private Limited</h2>
           <div className="about-content">
             <p>
-              Enlark Enterprises Private Limited, <b>An ISO 9001: 2015 Certified Enterprise,</b> Is A Name You Can Trust Being Pioneers In High Precision Vacuum Technology With Four Decades Of Inherited Legacy And Technology Of Famous <b>Bharath Vacuum Pumps Brand.</b> We Deliver A Diverse Range Of Vacuum Pumps, Vacuum Based Machinery And Vacuum Systems That Cater To Varied Industries Worldwide Ranging From <b>Pharmaceuticals, Chemical Processing, Jewellery Making, Food Processing, Packaging Solutions, Automotive, General Engineering, Dairy Farming, Paint Manufacturing, Distillation, Defense Applications, Lab Equipment</b> And Many Others.
+              Enlark Enterprises Private Limited, <b>an ISO 9001: 2015 certified enterprise,</b> is a name you can trust being pioneers in high precision vacuum technology with four decades of inherited legacy and technology of famous <b>Bharath Vacuum Pumps brand.</b> We deliver a diverse range of vacuum pumps, vacuum based machinery and vacuum systems that cater to varied industries worldwide ranging from <b>pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment</b> and many others.
             </p>
           </div>
         </div>
@@ -130,13 +130,13 @@ function DetailedAboutSection() {
                 <b>The Company Is Conveniently Located At Coimbatore, Tamilnadu And Cater To Clients Worldwide.</b>
               </div>
               <p style={{ marginBottom: '28px' }}>
-                With A Strong Engineering Team, Enlark Enterprises Private Limited Is Your Right Choice For High Quality Vacuum Pumps, Accessories And Vacuum Based Systems.
+                With a strong engineering team, Enlark Enterprises Private Limited is your right choice for high quality vacuum pumps, accessories and vacuum based systems.
               </p>
               <p style={{ marginBottom: '28px' }}>
-                Enlark Enterprises Private Limited Offers All Types Of Vacuum Pumps Ranging From <b>50LPM (3m³ /Min) To 20000 LPM (1200m³ /Min).</b> Enlark Enterprises Private Limited Is Specialized In Rotary Vane, Water Ring, Diaphragm And Piston Pumps. The Pumps Come In Multiple Models Like Oil Immersed, Oil Free As Well As Oil Lubricated Vacuum Pumps.
+                Enlark Enterprises Private Limited offers all types of vacuum pumps ranging from <b>50LPM (3m³ /min) to 20000 LPM (1200m³ /min).</b> Enlark Enterprises Private Limited is specialized in rotary vane, water ring, diaphragm and piston pumps. The pumps come in multiple models like oil immersed, oil free as well as oil lubricated vacuum pumps.
               </p>
               <p style={{ marginBottom: '28px' }}>
-                Enlark Enterprises Private Limited Provides You The Option To Choose From Direct Drive And Belt Drive Pumps. Enlark Enterprises Private Limited Also Delivers Single Stage As Well As Double Stage Models In Their Rotary Vane, Water Ring, And Diaphragm Pumps.
+                Enlark Enterprises Private Limited provides you the option to choose from direct drive and belt drive pumps. Enlark Enterprises Private Limited also delivers single stage as well as double stage models in their rotary vane, water ring, and diaphragm pumps.
               </p>
             </div>
           </div>
@@ -425,18 +425,18 @@ function ProductSection() {
 
 function IndustriesSection() {
   const industries = [
-    { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum Solutions For Pharma Production.' },
-    { title: 'Chemical Processing', img: chemImg, desc: 'Corrosive-Duty Pumps.' },
-    { title: 'Jewellery Making', img: jewelImg, desc: 'Precision Vacuum For Casting.' },
-    { title: 'Food Processing', img: foodImg, desc: 'Hygienic Vacuum Systems.' },
-    { title: 'Packaging Solutions', img: packImg, desc: 'High-Speed Vacuum.' },
-    { title: 'Automotive', img: autoImg, desc: 'Testing & Assembly Vacuum.' },
-    { title: 'General Engineering', img: engImg, desc: 'Versatile Industrial Vacuum.' },
-    { title: 'Dairy Farming', img: dairyImg, desc: 'Milking Vacuum Systems.' },
-    { title: 'Paint Manufacturing', img: paintImg, desc: 'Vacuum For Paint Processing.' },
-    { title: 'Distillation', img: distImg, desc: 'Controlled Vacuum Distillation.' },
-    { title: 'Defense Applications', img: defImg, desc: 'High-Performance Vacuum.' },
-    { title: 'Lab Equipment', img: labImg, desc: 'Lab-Grade Vacuum Solutions.' },
+    { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum solutions for pharma production.' },
+    { title: 'Chemical Processing', img: chemImg, desc: 'Corrosive-duty pumps.' },
+    { title: 'Jewellery Making', img: jewelImg, desc: 'Precision vacuum for casting.' },
+    { title: 'Food Processing', img: foodImg, desc: 'Hygienic vacuum systems.' },
+    { title: 'Packaging Solutions', img: packImg, desc: 'High-speed vacuum.' },
+    { title: 'Automotive', img: autoImg, desc: 'Testing & assembly vacuum.' },
+    { title: 'General Engineering', img: engImg, desc: 'Versatile industrial vacuum.' },
+    { title: 'Dairy Farming', img: dairyImg, desc: 'Milking vacuum systems.' },
+    { title: 'Paint Manufacturing', img: paintImg, desc: 'Vacuum for paint processing.' },
+    { title: 'Distillation', img: distImg, desc: 'Controlled vacuum distillation.' },
+    { title: 'Defense Applications', img: defImg, desc: 'High-performance vacuum.' },
+    { title: 'Lab Equipment', img: labImg, desc: 'Lab-grade vacuum solutions.' },
   ];
 
   return (
@@ -451,7 +451,7 @@ function IndustriesSection() {
             Sectors Supported
           </div>
           <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#011A2F' }}>Industries We Serve</h2>
-          <p style={{ color: '#666', marginTop: '5px' }}>Excellence In Vacuum Technology Across Diverse Sectors.</p>
+          <p style={{ color: '#666', marginTop: '5px' }}>Excellence in vacuum technology across diverse sectors.</p>
         </div>
 
         <div style={{
