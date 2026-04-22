@@ -15,7 +15,7 @@ export function ProductsPage() {
             Discovery & Precision
           </div>
           <h1 className="products-title">Enlark Enterprises Private Limited Vacuum Pumps</h1>
-          <p className="products-subtitle">Precision Engineered Vacuum Solutions for Global Industries</p>
+          <p className="products-subtitle">Precision Engineered Vacuum Solutions For Global Industries</p>
         </div>
       </div>
 

@@ -19,7 +19,7 @@ const AboutUsPage: React.FC = () => {
             Who We Are
           </div>
           <h1 className="products-title">About Enlark Enterprises Private Limited</h1>
-          <p className="products-subtitle">Durable and Efficient Vacuum Pumps of high quality and prompt service support.</p>
+          <p className="products-subtitle">Durable And Efficient Vacuum Pumps Of High Quality And Prompt Service Support.</p>
         </div>
       </section>
 
@@ -73,7 +73,7 @@ const AboutUsPage: React.FC = () => {
                 color: '#444',
                 fontWeight: '400'
               }}>
-                Our vision is to be a trusted product manufacturer of global repute with one stop solution for all vacuum requirements, known for quality and reliability of all that we deliver.
+                Our Vision Is To Be A Trusted Product Manufacturer Of Global Repute With One Stop Solution For All Vacuum Requirements, Known For Quality And Reliability Of All That We Deliver.
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ const AboutUsPage: React.FC = () => {
             <div className="mission-content-col" style={{ flex: '1.2' }}>
               <div className="premium-badge">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                Commitment to Excellence
+                Commitment To Excellence
               </div>
               
               <h2 className="responsive-mission-title" style={{ 
@@ -115,7 +115,7 @@ const AboutUsPage: React.FC = () => {
                 color: '#011A2F', 
                 fontWeight: '800',
                 marginBottom: '30px'
-              }}>Our mission is to create world class Vacuum solutions.</h2>
+              }}>Our Mission Is To Create World Class Vacuum Solutions.</h2>
               
               <div style={{ marginBottom: '40px' }}>
                 <ul style={{ listStyle: 'none', padding: 0 }} className="responsive-mission-list">
@@ -205,7 +205,7 @@ const AboutUsPage: React.FC = () => {
 
             {/* Right Content Column */}
             <div className="shape-future-content-box">
-              <h2 style={{ color: '#089AD3' }}>Shape the Vacuum World of the Future</h2>
+              <h2 style={{ color: '#089AD3' }}>Shape The Vacuum World Of The Future</h2>
               
               <div className="shape-future-text">
                 <p>
@@ -352,7 +352,7 @@ const AboutUsPage: React.FC = () => {
               fontWeight: '700',
               color: '#011A2F' /* Darker color for readability on image */
             }}>
-              We focus on product quality and precisely meeting the customer needs through scientific design and global standards.
+              We Focus On Product Quality And Precisely Meeting The Customer Needs Through Scientific Design And Global Standards.
             </h3>
 
             <button 

@@ -53,105 +53,105 @@ export interface Product {
 export const products: Product[] = [
     { 
         id: 1, 
-        category: 'Rotary vane pumps', 
-        name: 'Rotary vane pumps – single stage oil immersed direct drive', 
+        category: 'Rotary Vane Pumps', 
+        name: 'Rotary Vane Pumps – Single Stage Oil Immersed Direct Drive', 
         image: p1_1,
         detailImages: [p1_1, p1_2]
     },
     { 
         id: 2, 
-        category: 'Rotary vane pumps', 
-        name: 'Rotary vane pumps – double stage oil immersed direct drive', 
+        category: 'Rotary Vane Pumps', 
+        name: 'Rotary Vane Pumps – Double Stage Oil Immersed Direct Drive', 
         image: p2_1,
         detailImages: [p2_1, p2_2]
     },
     { 
         id: 3, 
-        category: 'Rotary vane pumps', 
-        name: 'Rotary vane pumps – single stage oil lubricated direct drive', 
+        category: 'Rotary Vane Pumps', 
+        name: 'Rotary Vane Pumps – Single Stage Oil Lubricated Direct Drive', 
         image: p3_1,
         detailImages: [p3_1, p3_2]
     },
     { 
         id: 4, 
-        category: 'Mono block & belt drive', 
-        name: 'Mono block pumps – oil lubricated', 
+        category: 'Mono Block & Belt Drive', 
+        name: 'Mono Block Pumps – Oil Lubricated', 
         image: p4_1,
         detailImages: [p4_1, p4_2, p4_3, p4_5]
     },
     { 
         id: 5, 
-        category: 'Mono block & belt drive', 
-        name: 'Belt drive pumps – oil lubricated', 
+        category: 'Mono Block & Belt Drive', 
+        name: 'Belt Drive Pumps – Oil Lubricated', 
         image: p5_1,
         detailImages: [p5_1, p5_2, p5_3, p5_4, p5_5]
     },
     { 
         id: 6, 
-        category: 'Mono block & belt drive', 
-        name: 'Mono block pumps – oil free', 
+        category: 'Mono Block & Belt Drive', 
+        name: 'Mono Block Pumps – Oil Free', 
         image: p6_1,
         detailImages: [p6_1]
     },
     { 
         id: 7, 
-        category: 'Water ring pumps', 
-        name: 'Water ring pumps – single stage direct drive', 
+        category: 'Water Ring Pumps', 
+        name: 'Water Ring Pumps – Single Stage Direct Drive', 
         image: p7_1,
         detailImages: [p7_1]
     },
     { 
         id: 8, 
-        category: 'Water ring pumps', 
-        name: 'Water ring pumps – double stage direct drive', 
+        category: 'Water Ring Pumps', 
+        name: 'Water Ring Pumps – Double Stage Direct Drive', 
         image: p2_1 
     },
     { 
         id: 9, 
-        category: 'Water ring pumps', 
-        name: 'Water ring pumps – monoblock', 
+        category: 'Water Ring Pumps', 
+        name: 'Water Ring Pumps – Monoblock', 
         image: p9_1,
         detailImages: [p9_1]
     },
     { 
         id: 10, 
-        category: 'Diaphragm & piston pumps', 
-        name: 'Monoblock diaphragm pumps – oil free single stage', 
+        category: 'Diaphragm & Piston Pumps', 
+        name: 'Monoblock Diaphragm Pumps – Oil Free Single Stage', 
         image: p10_1,
         detailImages: [p10_1]
     },
     { 
         id: 11, 
-        category: 'Diaphragm & piston pumps', 
-        name: 'Monoblock diaphragm pumps – oil free double stage', 
+        category: 'Diaphragm & Piston Pumps', 
+        name: 'Monoblock Diaphragm Pumps – Oil Free Double Stage', 
         image: p11_1,
         detailImages: [p11_1]
     },
     { 
         id: 12, 
-        category: 'Diaphragm & piston pumps', 
-        name: 'Piston pumps – oil free single stage', 
+        category: 'Diaphragm & Piston Pumps', 
+        name: 'Piston Pumps – Oil Free Single Stage', 
         image: p12_1,
         detailImages: [p12_1]
     },
     { 
         id: 13, 
         category: 'Accessories', 
-        name: 'Roots blower', 
+        name: 'Roots Blower', 
         image: p13_1,
         detailImages: [p13_1]
     },
     { 
         id: 14, 
         category: 'Accessories', 
-        name: 'Milking machine accessories', 
+        name: 'Milking Machine Accessories', 
         image: p14_1,
         detailImages: [p14_1, p14_2, p14_3]
     },
     { 
         id: 15, 
-        category: 'Special systems', 
-        name: 'Vacuum systems - roots blower and chamber attached - pending', 
+        category: 'Special Systems', 
+        name: 'Vacuum Systems - Roots Blower And Chamber Attached - Pending', 
         image: p1_1 
     },
 ];

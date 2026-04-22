@@ -350,7 +350,7 @@
 .about-left {
   flex: 0 0 300px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .badge-container {
@@ -367,17 +367,23 @@
   font-size: 18px;
   color: #007CC3;
   font-weight: 600;
-  margin-top: -30px; /* Overlap with wreath logic */
+  margin-top: 10px;
   position: relative;
   z-index: 2;
 }
 
 .badge-text.decoration {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--primary-dark-blue);
-  font-weight: 600;
-  margin-top: 10px;
-  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.history-badge-svg {
+  width: 200px;
+  height: 200px;
+  display: block;
 }
 
 .about-right {
@@ -2633,15 +2639,16 @@
     flex: none !important;
     width: 100% !important;
     margin-bottom: 20px !important;
-    justify-content: center !important;
-    text-align: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    margin-left: 0 !important;
   }
 
   .about-left .badge-container {
-    text-align: center !important;
-    align-items: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .about-left .badge-years {
@@ -2651,6 +2658,11 @@
 
   .about-left .badge-text.decoration {
     margin-top: 5px !important;
+  }
+
+  .history-badge-svg {
+    width: 160px !important;
+    height: 160px !important;
   }
 
   .about-section .flex-between {

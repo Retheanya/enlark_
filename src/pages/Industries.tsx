@@ -12,18 +12,18 @@ import defImg from '../assets/defense_applications.jpeg';
 import labImg from '../assets/lab_equipment.png';
 
 const industries = [
-  { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum solutions for pharma production.' },
-  { title: 'Chemical Processing', img: chemImg, desc: 'Corrosive-duty pumps.' },
-  { title: 'Jewellery Making', img: jewelImg, desc: 'Precision vacuum for casting.' },
-  { title: 'Food Processing', img: foodImg, desc: 'Hygienic vacuum systems.' },
-  { title: 'Packaging Solutions', img: packImg, desc: 'High-speed vacuum.' },
-  { title: 'Automotive', img: autoImg, desc: 'Testing & assembly vacuum.' },
-  { title: 'General Engineering', img: engImg, desc: 'Versatile industrial vacuum.' },
-  { title: 'Dairy Farming', img: dairyImg, desc: 'Milking vacuum systems.' },
-  { title: 'Paint Manufacturing', img: paintImg, desc: 'Vacuum for paint processing.' },
-  { title: 'Distillation', img: distImg, desc: 'Controlled vacuum distillation.' },
-  { title: 'Defense Applications', img: defImg, desc: 'High-performance vacuum.' },
-  { title: 'Lab Equipment', img: labImg, desc: 'Lab-grade vacuum solutions.' },
+  { title: 'Pharmaceuticals', img: pharmImg, desc: 'Vacuum Solutions For Pharma Production.' },
+  { title: 'Chemical Processing', img: chemImg, desc: 'Corrosive-Duty Pumps.' },
+  { title: 'Jewellery Making', img: jewelImg, desc: 'Precision Vacuum For Casting.' },
+  { title: 'Food Processing', img: foodImg, desc: 'Hygienic Vacuum Systems.' },
+  { title: 'Packaging Solutions', img: packImg, desc: 'High-Speed Vacuum.' },
+  { title: 'Automotive', img: autoImg, desc: 'Testing & Assembly Vacuum.' },
+  { title: 'General Engineering', img: engImg, desc: 'Versatile Industrial Vacuum.' },
+  { title: 'Dairy Farming', img: dairyImg, desc: 'Milking Vacuum Systems.' },
+  { title: 'Paint Manufacturing', img: paintImg, desc: 'Vacuum For Paint Processing.' },
+  { title: 'Distillation', img: distImg, desc: 'Controlled Vacuum Distillation.' },
+  { title: 'Defense Applications', img: defImg, desc: 'High-Performance Vacuum.' },
+  { title: 'Lab Equipment', img: labImg, desc: 'Lab-Grade Vacuum Solutions.' },
 ];
 
 export function IndustriesPage() {
@@ -36,7 +36,7 @@ export function IndustriesPage() {
             Organisations We Serve
           </div>
           <h1 className="products-title">Industries We Serve</h1>
-          <p className="products-subtitle">We provide precision-engineered vacuum pump solutions for a wide range of industrial applications worldwide.</p>
+          <p className="products-subtitle">We Provide Precision-Engineered Vacuum Pump Solutions For A Wide Range Of Industrial Applications Worldwide.</p>
         </div>
       </section>
 
