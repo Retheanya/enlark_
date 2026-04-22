@@ -1190,6 +1190,12 @@
 .technovuz-name {
   font-weight: 800;
   color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.technovuz-name:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

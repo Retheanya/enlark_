@@ -119,7 +119,7 @@ function Footer() {
         <div className="container footer-bottom-container">
           <p className="copyright-text">{`${COMPANY.nameShort} © 2026 All Rights Reserved`}</p>
           <p className="credits-text">
-            Made With <span className="heart-icon">❤</span> By <span className="technovuz-name">Technovuz</span>
+            Made With <span className="heart-icon">❤</span> By <a href="https://www.technovuz.com" target="_blank" rel="noopener noreferrer" className="technovuz-name">Technovuz</a>
           </p>
         </div>
       </div>
