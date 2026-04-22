@@ -244,7 +244,7 @@ const AboutUsPage: React.FC = () => {
       </section>
         {/* Glassmorphism Overlay Toggle */}
         {showCaps && (
-          <div style={{
+          <div className="product-range-overlay" style={{
             position: 'fixed',
             top: 0,
             left: 0,
@@ -260,7 +260,7 @@ const AboutUsPage: React.FC = () => {
             padding: '20px',
             animation: 'fadeIn 0.3s ease-out'
           }}>
-            <div style={{
+            <div className="product-range-modal" style={{
               backgroundColor: 'rgba(255, 255, 255, 0.7)',
               padding: '50px',
               borderRadius: '24px',
@@ -395,6 +395,31 @@ const AboutUsPage: React.FC = () => {
         @keyframes fadeIn {
           from { opacity: 0; transform: scale(0.98); }
           to { opacity: 1; transform: scale(1); }
+        }
+        @media (max-width: 768px) {
+          .product-range-overlay {
+            padding: 10px !important;
+          }
+          .product-range-modal {
+            padding: 35px 20px !important;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 16px !important;
+          }
+          .product-range-modal h3 {
+            font-size: 20px !important;
+            margin-bottom: 20px !important;
+          }
+          .product-range-modal li {
+            font-size: 14px !important;
+            gap: 10px !important;
+            margin-bottom: 12px !important;
+          }
+          .product-range-modal .no-theme-btn {
+            top: 15px !important;
+            right: 15px !important;
+            font-size: 28px !important;
+          }
         }
       `}} />
     </div>

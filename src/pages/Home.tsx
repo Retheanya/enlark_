@@ -88,7 +88,7 @@ function AboutSection() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
             Our legacy
           </div>
-          <h2 className="section-title">Welcome to Enlark enterprises private limited</h2>
+          <h2 className="section-title">Welcome to Enlark Enterprises Private Limited</h2>
           <div className="about-content">
             <p>
               Enlark Enterprises Private Limited, <b>an ISO 9001: 2015 certified enterprise,</b> is a name you can trust being pioneers in high precision vacuum technology with four decades of inherited legacy and technology of famous <b>Bharath Vacuum Pumps brand.</b> We deliver a diverse range of vacuum pumps, vacuum based machinery and vacuum systems that cater to varied industries worldwide ranging from <b>pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment</b> and many others.
