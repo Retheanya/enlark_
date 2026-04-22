@@ -14,7 +14,7 @@ export function ProductsPage() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             Discovery & precision
           </div>
-          <h1 className="products-title">Enlark enterprises private limited vacuum pumps</h1>
+          <h1 className="products-title">Enlark Enterprises Private Limited vacuum pumps</h1>
           <p className="products-subtitle">Precision engineered vacuum solutions for global industries</p>
         </div>
       </div>
