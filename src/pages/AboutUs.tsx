@@ -16,9 +16,9 @@ const AboutUsPage: React.FC = () => {
         <div className="container">
           <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Who We Are
+            Who we are
           </div>
-          <h1 className="products-title">About Enlark Enterprises Private Limited</h1>
+          <h1 className="products-title">About Enlark enterprises private limited</h1>
           <p className="products-subtitle">Durable and efficient vacuum pumps of high quality and prompt service support.</p>
         </div>
       </section>
@@ -58,7 +58,7 @@ const AboutUsPage: React.FC = () => {
             <div style={{ position: 'relative', zIndex: 1, maxWidth: '700px' }}>
               <div className="premium-badge">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                Core Purpose
+                Core purpose
               </div>
               <h2 style={{ 
                 fontSize: '32px', 
@@ -66,7 +66,7 @@ const AboutUsPage: React.FC = () => {
                 marginBottom: '20px', 
                 fontWeight: '700',
                 letterSpacing: '-0.02em'
-              }}>Our Vision</h2>
+              }}>Our vision</h2>
               <p style={{ 
                 fontSize: '18px', 
                 lineHeight: '1.8', 
@@ -106,7 +106,7 @@ const AboutUsPage: React.FC = () => {
             <div className="mission-content-col" style={{ flex: '1.2' }}>
               <div className="premium-badge">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                Commitment To Excellence
+                Commitment to excellence
               </div>
               
               <h2 className="responsive-mission-title" style={{ 
@@ -115,7 +115,7 @@ const AboutUsPage: React.FC = () => {
                 color: '#011A2F', 
                 fontWeight: '800',
                 marginBottom: '30px'
-              }}>Our Mission Is To Create World Class Vacuum Solutions.</h2>
+              }}>Our mission is to create world class vacuum solutions.</h2>
               
               <div style={{ marginBottom: '40px' }}>
                 <ul style={{ listStyle: 'none', padding: 0 }} className="responsive-mission-list">
@@ -205,7 +205,7 @@ const AboutUsPage: React.FC = () => {
 
             {/* Right Content Column */}
             <div className="shape-future-content-box">
-              <h2 style={{ color: '#089AD3' }}>Shape The Vacuum World Of The Future</h2>
+              <h2 style={{ color: '#089AD3' }}>Shape the vacuum world of the future</h2>
               
               <div className="shape-future-text">
                 <p>
@@ -286,7 +286,7 @@ const AboutUsPage: React.FC = () => {
               >
                 &times;
               </button>
-              <h3 style={{ fontSize: '24px', color: '#011A2F', marginBottom: '30px', fontWeight: '800', textAlign: 'left' }}>Technological Capabilities</h3>
+              <h3 style={{ fontSize: '24px', color: '#011A2F', marginBottom: '30px', fontWeight: '800', textAlign: 'left' }}>Technological capabilities</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {[
                   'Rotary Vane, Water Ring, Diaphragm, and Piston Pumps.',
@@ -352,7 +352,7 @@ const AboutUsPage: React.FC = () => {
               fontWeight: '700',
               color: '#011A2F' /* Darker color for readability on image */
             }}>
-              We Focus On Product Quality And Precisely Meeting The Customer Needs Through Scientific Design And Global Standards.
+              We focus on product quality and precisely meeting the customer needs through scientific design and global standards.
             </h3>
 
             <button 

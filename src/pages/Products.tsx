@@ -12,10 +12,10 @@ export function ProductsPage() {
         <div className="container">
           <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Discovery & Precision
+            Discovery & precision
           </div>
-          <h1 className="products-title">Enlark Enterprises Private Limited Vacuum Pumps</h1>
-          <p className="products-subtitle">Precision Engineered Vacuum Solutions For Global Industries</p>
+          <h1 className="products-title">Enlark enterprises private limited vacuum pumps</h1>
+          <p className="products-subtitle">Precision engineered vacuum solutions for global industries</p>
         </div>
       </div>
 

@@ -86,6 +86,53 @@ a {
   font-size: var(--content-size) !important;
 }
 
+p, li, h1, h2, h3, h4, h5, h6,
+.section-title,
+.about-split-title,
+.about-hero-title,
+.info-title,
+.info-subtitle,
+.info-advantages-title,
+.product-main-title,
+.industries-title,
+.products-title,
+.products-col-title,
+.industries-hero-title {
+  text-transform: none !important;
+}
+
+/* Sentence case: only capitalize the first letter */
+p::first-letter, 
+li::first-letter, 
+h1::first-letter, 
+h2::first-letter, 
+h3::first-letter, 
+h4::first-letter, 
+h5::first-letter, 
+h6::first-letter,
+.section-title::first-letter,
+.about-split-title::first-letter,
+.about-hero-title::first-letter,
+.info-title::first-letter,
+.info-subtitle::first-letter,
+.info-advantages-title::first-letter,
+.industries-title::first-letter,
+.products-title::first-letter,
+.products-col-title::first-letter,
+.industries-hero-title::first-letter {
+  text-transform: uppercase !important;
+}
+
+/* Exclude products from first-letter capitalization */
+.product-section p::first-letter,
+.product-detail-page p::first-letter,
+.products-page p::first-letter,
+.product-section h1::first-letter, .product-section h2::first-letter, .product-section h3::first-letter,
+.product-detail-page h1::first-letter, .product-detail-page h2::first-letter, .product-detail-page h3::first-letter,
+.products-page h1::first-letter, .products-page h2::first-letter, .products-page h3::first-letter {
+  text-transform: none !important;
+}
+
 p {
   margin: var(--content-paragraph-margin-y) 0 !important;
   font-size: var(--p-size) !important;
@@ -119,7 +166,6 @@ h1, h2, h3, h4, h5, h6,
   font-family: var(--font-family) !important;
   font-size: var(--heading-size) !important;
   font-weight: var(--heading-weight) !important;
-  text-transform: none !important;
 }
 
 h3 {

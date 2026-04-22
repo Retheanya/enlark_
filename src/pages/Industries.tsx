@@ -33,9 +33,9 @@ export function IndustriesPage() {
         <div className="container">
           <div className="premium-badge" style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#fff', margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Organisations We Serve
+            Organisations we serve
           </div>
-          <h1 className="products-title">Industries We Serve</h1>
+          <h1 className="products-title">Industries we serve</h1>
           <p className="products-subtitle">We provide precision-engineered vacuum pump solutions for a wide range of industrial applications worldwide.</p>
         </div>
       </section>
@@ -103,28 +103,16 @@ export function IndustriesPage() {
                     backdropFilter: 'blur(15px)',
                     WebkitBackdropFilter: 'blur(15px)',
                     border: '1px solid rgba(255,255,255,0.2)',
-                    textAlign: 'left',
+                    textAlign: 'center',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
+                    justifyContent: 'flex-end',
+                    paddingBottom: '15px',
                     gap: '4px'
                   }}
                 >
                   <h3 style={{ color: '#ffffff', margin: '0', fontSize: '15px' }}>{ind.title}</h3>
-                  <p style={{ 
-                    fontSize: '11.5px', 
-                    color: '#ffffff', 
-                    fontFamily: "'Montserrat', sans-serif",
-                    lineHeight: '1.3', 
-                    margin: 0,
-                    opacity: 0.95,
-                    display: '-webkit-box',
-                    WebkitLineClamp: '2',
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden'
-                  }}>
-                    {ind.desc}
-                  </p>
+
                 </div>
               </div>
             ))}

@@ -19,7 +19,7 @@ import distImg from '../assets/distillation.jpeg';
 import defImg from '../assets/defense_applications.jpeg';
 import labImg from '../assets/lab_equipment.png';
 import { products } from '../data/productsData';
-import { COMPANY } from '../config/company';
+
 
 function Hero() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -86,9 +86,9 @@ function AboutSection() {
         <div className="about-right">
           <div className="premium-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
-            Our Legacy
+            Our legacy
           </div>
-          <h2 className="section-title">Welcome To Enlark Enterprises Private Limited</h2>
+          <h2 className="section-title">Welcome to Enlark enterprises private limited</h2>
           <div className="about-content">
             <p>
               Enlark Enterprises Private Limited, <b>an ISO 9001: 2015 certified enterprise,</b> is a name you can trust being pioneers in high precision vacuum technology with four decades of inherited legacy and technology of famous <b>Bharath Vacuum Pumps brand.</b> We deliver a diverse range of vacuum pumps, vacuum based machinery and vacuum systems that cater to varied industries worldwide ranging from <b>pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment</b> and many others.
@@ -127,7 +127,7 @@ function DetailedAboutSection() {
             </div>
             <div className="about-text-content" style={{ fontSize: '17px', lineHeight: '1.9', color: '#444' }}>
               <div style={{ marginBottom: '28px', fontWeight: '500', color: '#089AD3' }}>
-                <b>The Company Is Conveniently Located At Coimbatore, Tamilnadu And Cater To Clients Worldwide.</b>
+                <b>The company is conveniently located at Coimbatore, Tamilnadu And Cater to clients worldwide.</b>
               </div>
               <p style={{ marginBottom: '28px' }}>
                 With a strong engineering team, Enlark Enterprises Private Limited is your right choice for high quality vacuum pumps, accessories and vacuum based systems.
@@ -222,9 +222,9 @@ function CommitmentBanner() {
               fontFamily: "'Poppins', sans-serif"
             }}
           >
-            We, At Enlark, Are Committed To Consistent Quality In Our Products And
-            Services And We Deliver Custom Solutions Best Suited
-            To Each Of Our Clients.
+            We, at Enlark, are committed to consistent quality in our products and
+            services and we deliver custom solutions best suited
+            to each of our clients.
           </h3>
         </div>
 
@@ -258,11 +258,11 @@ function ProductSection() {
         <div className="section-header-left">
           <div className="premium-badge" style={{ margin: '0 0 20px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
-            Our Products
+            Our products
           </div>
-          <h2 className="product-main-title">Industrial Vacuum Pumps</h2>
+          <h2 className="product-main-title">Industrial vacuum pumps</h2>
           <p className="product-sub-title">
-            {`${COMPANY.nameShort} offers The premium Range of ALL Types of Vacuum Pumps, Vacuum System and Vacuum related products`}
+            Enlark Enterprises offers the premium range of all types of vacuum pumps, vacuum system and vacuum related products
           </p>
         </div>
 
@@ -448,9 +448,9 @@ function IndustriesSection() {
         <div style={{ textAlign: 'left', marginBottom: '40px' }}>
           <div className="premium-badge" style={{ margin: '0 0 15px' }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-            Sectors Supported
+            Sectors supported
           </div>
-          <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#011A2F' }}>Industries We Serve</h2>
+          <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#011A2F' }}>Industries we serve</h2>
           <p style={{ color: '#666', marginTop: '5px' }}>Excellence in vacuum technology across diverse sectors.</p>
         </div>
 
@@ -513,27 +513,16 @@ function IndustriesSection() {
                   backdropFilter: 'blur(15px)',
                   WebkitBackdropFilter: 'blur(15px)',
                   border: '1px solid rgba(255,255,255,0.2)',
+                  textAlign: 'center',
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'center',
+                  justifyContent: 'flex-end',
+                  paddingBottom: '15px',
                   gap: '4px'
                 }}
               >
                 <h3 style={{ color: '#ffffff', margin: '0', fontSize: '15px' }}>{ind.title}</h3>
-                <p style={{
-                  fontSize: '11.5px',
-                  color: '#ffffff',
-                  fontFamily: "'Montserrat', sans-serif",
-                  lineHeight: '1.3',
-                  margin: 0,
-                  opacity: 0.95,
-                  display: '-webkit-box',
-                  WebkitLineClamp: '2',
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden'
-                }}>
-                  {ind.desc}
-                </p>
+
               </div>
             </div>
           ))}
