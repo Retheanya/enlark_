@@ -328,3 +328,10 @@ h3.forced-black-text {
   text-transform: none !important;
   font-weight: 700 !important;
 }
+
+/* Foolproof Lowercase Enforcement */
+#strictly-lowercase-email,
+#strictly-lowercase-email::first-letter {
+  text-transform: lowercase !important;
+}
+

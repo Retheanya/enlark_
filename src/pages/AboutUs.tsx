@@ -19,7 +19,7 @@ const AboutUsPage: React.FC = () => {
             Who we are
           </div>
           <h1 className="products-title">About Enlark Enterprises Private Limited</h1>
-          <p className="products-subtitle">Durable and efficient vacuum pumps of high quality and prompt service support.</p>
+          <p className="products-subtitle">Durable and efficient industrial vacuum pumps of high quality and prompt service support.</p>
         </div>
       </section>
 
@@ -209,7 +209,7 @@ const AboutUsPage: React.FC = () => {
               
               <div className="shape-future-text">
                 <p>
-                  Enlark Enterprises Private Limited designs and manufactures a broad range of vacuum pumps, and vacuum systems that cater to varied industries worldwide ranging from pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment and many others. 
+                  Enlark designs and manufactures a broad range of industrial vacuum pumps and vacuum systems that cater to varied industries worldwide ranging from pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment and many others. 
                 </p>
                 <p>
                   With a strong foundation committed to scientific design, precise measurements and global standards, we focus on product quality and precisely meeting the customer needs. 
@@ -401,24 +401,30 @@ const AboutUsPage: React.FC = () => {
             padding: 10px !important;
           }
           .product-range-modal {
-            padding: 35px 20px !important;
-            max-height: 85vh;
+            padding: 25px 15px !important;
+            max-height: 90vh;
             overflow-y: auto;
             border-radius: 16px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+          }
+          .product-range-modal ul {
+            padding-left: 0 !important;
           }
           .product-range-modal h3 {
             font-size: 20px !important;
-            margin-bottom: 20px !important;
+            margin-bottom: 15px !important;
+            padding-right: 20px !important;
           }
           .product-range-modal li {
             font-size: 14px !important;
-            gap: 10px !important;
-            margin-bottom: 12px !important;
+            gap: 8px !important;
+            margin-bottom: 10px !important;
           }
           .product-range-modal .no-theme-btn {
-            top: 15px !important;
-            right: 15px !important;
-            font-size: 28px !important;
+            top: 10px !important;
+            right: 10px !important;
+            font-size: 26px !important;
           }
         }
       `}} />

@@ -21,7 +21,7 @@ export function Navbar() {
             <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
               <img src={logo} alt="Enlark Logo" className="logo" />
               <div className="company-branding">
-                <span className="brand-name">ENLARK ENTERPRISES PVT. LTD.</span>
+                <span className="brand-name">ENLARK ENTERPRISES PRIVATE LIMITED</span>
                 <span className="brand-iso">(AN ISO 9001: 2015 COMPANY)</span>
               </div>
             </NavLink>

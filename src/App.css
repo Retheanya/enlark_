@@ -354,20 +354,29 @@
 }
 
 .badge-container {
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -30px; /* Move content upwards as requested */
+  gap: 0 !important;
 }
 
 .badge-img {
-  width: 180px;
+  width: 280px; /* Even larger and heavier */
   height: auto;
-  margin-bottom: 5px;
+  margin-bottom: -10px !important;
+}
+
+.no-margin-important {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .badge-years {
   font-size: 18px;
   color: #007CC3;
   font-weight: 600;
-  margin-top: 10px;
   position: relative;
   z-index: 2;
 }
@@ -376,7 +385,6 @@
   font-size: 16px;
   color: var(--primary-dark-blue);
   font-weight: 700;
-  margin-top: 8px;
   line-height: 1.4;
 }
 
@@ -1419,6 +1427,13 @@
   .hero .container, .about-section .container, .product-display {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+  }
+  
+  .about-left {
+    justify-content: center;
+    flex: none;
+    margin-bottom: 30px;
   }
   
   .product-list-container {
@@ -1495,6 +1510,14 @@
 
   .industry-photo-card {
     height: 180px;
+  }
+
+  .responsive-image-wrap {
+    min-height: 250px !important;
+  }
+
+  .responsive-image-wrap img {
+    object-fit: contain !important;
   }
 }
 

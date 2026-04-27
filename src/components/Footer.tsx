@@ -20,9 +20,9 @@ function Footer() {
           <ul className="footer-links">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about-us">About Us</NavLink></li>
-            <li><NavLink to="/products">Our products</NavLink></li>
-            <li><NavLink to="/industries">Industries we serve</NavLink></li>
-            <li><NavLink to="/contact">Contact us</NavLink></li>
+            <li><NavLink to="/products">Our Products</NavLink></li>
+            <li><NavLink to="/industries">Industries We Serve</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li>
           </ul>
         </div>
 

@@ -5,7 +5,7 @@ import carousel1 from '../assets/carousel1.png';
 import carousel2 from '../assets/carousel2.png';
 import carousel3 from '../assets/carousel3.png';
 import vacumBg from '../assets/vacum.png';
-import accessoryImg from '../assets/14.Milking Machine Accessories/02..Milking Machine Accessories.jpg';
+import detailedAboutImg from '../assets/02.Rotary Vane Pumps – Double Stage Oil Immersed Direct Drive/01.Rotary Vane Pumps – Double Stage Oil Immersed Direct Drive.jpg';
 import pharmImg from '../assets/pharmaceuticals.jpeg';
 import chemImg from '../assets/chemical_processing.jpeg';
 import jewelImg from '../assets/jewellery_making.jpeg';
@@ -18,6 +18,7 @@ import paintImg from '../assets/paint_manufacturing.jpeg';
 import distImg from '../assets/distillation.jpeg';
 import defImg from '../assets/defense_applications.jpeg';
 import labImg from '../assets/lab_equipment.png';
+import legacyImg from '../assets/5.png';
 import { products } from '../data/productsData';
 
 
@@ -70,16 +71,16 @@ function AboutSection() {
         <div className="about-left">
           <div className="badge-container">
             <div style={{ marginBottom: '5px' }}>
-              <svg className="history-badge-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 15 L54 6 L64 9 L60 18 A32 32 0 0 1 76 28 L85 24 L90 33 L81 38 A32 32 0 0 1 85 50 L94 54 L91 64 L82 60 A32 32 0 0 1 72 76 L76 85 L67 90 L62 81 A32 32 0 0 1 50 85 L46 94 L36 91 L40 82 A32 32 0 0 1 24 72 L15 76 L10 67 L19 62 A32 32 0 0 1 15 50 L6 46 L9 36 L18 40 A32 32 0 0 1 28 24 L24 15 L33 10 L38 19 A32 32 0 0 1 50 15 Z" fill="transparent" stroke="#013D8B" strokeWidth="4.5" strokeLinejoin="round" />
-                <circle cx="50" cy="50" r="23" fill="transparent" stroke="#013D8B" strokeWidth="3" />
-                <circle cx="50" cy="50" r="16" fill="transparent" stroke="#013D8B" strokeWidth="1" strokeDasharray="3 3" />
-                <text x="50" y="50" fontSize="20" fontWeight="900" textAnchor="middle" dominantBaseline="central" fill="#013D8B" style={{ fontFamily: 'Arial, sans-serif' }}>5+</text>
-              </svg>
+              <img 
+                src={legacyImg} 
+                alt="3 Decades of Legacy" 
+                className="history-badge-img" 
+                style={{ width: '200px', height: '200px', objectFit: 'contain' }} 
+              />
             </div>
-            <p className="badge-years" style={{ letterSpacing: '1px', fontWeight: '800' }}>2019-2026</p>
-            <p className="badge-text decoration" style={{ fontWeight: '600' }}>
-              A 5+ year history of quality and reliability
+            <p className="badge-years no-margin-important" style={{ letterSpacing: '1px', fontWeight: '800' }}>2019-2026</p>
+            <p className="badge-text decoration no-margin-important" style={{ fontWeight: '600' }}>
+              3 Decades of history of quality and reliability
             </p>
           </div>
         </div>
@@ -91,7 +92,7 @@ function AboutSection() {
           <h2 className="section-title">Welcome to Enlark Enterprises Private Limited</h2>
           <div className="about-content">
             <p>
-              Enlark Enterprises Private Limited, <b>an ISO 9001: 2015 certified enterprise,</b> is a name you can trust being pioneers in high precision vacuum technology with four decades of inherited legacy and technology of famous <b>Bharath Vacuum Pumps brand.</b> We deliver a diverse range of vacuum pumps, vacuum based machinery and vacuum systems that cater to varied industries worldwide ranging from <b>pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment</b> and many others.
+              Enlark,<b>an ISO 9001: 2015 certified enterprise,</b> is a name you can trust being pioneers in high precision vacuum technology with four decades of inherited legacy and technology of famous <b>Bharath Vacuum Pumps</b> brand. We deliver a diverse range of vacuum pumps, vacuum based machinery and vacuum systems that cater to varied industries worldwide ranging from <b>pharmaceuticals, chemical processing, jewellery making, food processing, packaging solutions, automotive, general engineering, dairy farming, paint manufacturing, distillation, defense applications, lab equipment</b> and many others.
             </p>
           </div>
         </div>
@@ -127,16 +128,16 @@ function DetailedAboutSection() {
             </div>
             <div className="about-text-content" style={{ fontSize: '17px', lineHeight: '1.9', color: '#444' }}>
               <div style={{ marginBottom: '28px', fontWeight: '500', color: '#089AD3' }}>
-                <b>The company is conveniently located at Coimbatore, Tamilnadu And Cater to clients worldwide.</b>
+                <b>The company is conveniently located at Coimbatore, Tamilnadu and cater to clients worldwide.</b>
               </div>
               <p style={{ marginBottom: '28px' }}>
                 With a strong engineering team, Enlark Enterprises Private Limited is your right choice for high quality vacuum pumps, accessories and vacuum based systems.
               </p>
               <p style={{ marginBottom: '28px' }}>
-                Enlark Enterprises Private Limited offers all types of vacuum pumps ranging from <b>50LPM (3m³ /min) to 20000 LPM (1200m³ /min).</b> Enlark Enterprises Private Limited is specialized in rotary vane, water ring, diaphragm and piston pumps. The pumps come in multiple models like oil immersed, oil free as well as oil lubricated vacuum pumps.
+                Enlark offers all types of vacuum pumps ranging from <b>50LPM (3m³ /min) to 20000 LPM (1200m³ /min).</b> Enlark is specialized in rotary vane, water ring, diaphragm and piston pumps. The pumps come in multiple models like oil immersed, oil free as well as oil lubricated vacuum pumps.
               </p>
               <p style={{ marginBottom: '28px' }}>
-                Enlark Enterprises Private Limited provides you the option to choose from direct drive and belt drive pumps. Enlark Enterprises Private Limited also delivers single stage as well as double stage models in their rotary vane, water ring, and diaphragm pumps.
+                Enlark provides you the option to choose from direct drive and belt drive pumps. Enlark also delivers single stage as well as double stage models in their rotary vane, water ring, and diaphragm pumps.
               </p>
             </div>
           </div>
@@ -154,7 +155,7 @@ function DetailedAboutSection() {
                 minHeight: '400px'
               }} className="responsive-image-wrap">
                 <img
-                  src={accessoryImg}
+                  src={detailedAboutImg}
                   alt="Enlark Enterprises Private Limited Vacuum Pump Accessories"
                   style={{
                     width: '100%',
@@ -262,7 +263,7 @@ function ProductSection() {
           </div>
           <h2 className="product-main-title">Industrial vacuum pumps</h2>
           <p className="product-sub-title">
-            Enlark Enterprises offers the premium range of all types of vacuum pumps, vacuum system and vacuum related products
+            Enlark Enterprises offers the premium range of all types of industrial vacuum pumps, Vacuum systems and vacuum related products
           </p>
         </div>
 

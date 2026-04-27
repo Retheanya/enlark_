@@ -115,7 +115,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
-                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>{COMPANY.email}</p>
+                    <p id="strictly-lowercase-email" style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>marketing@enlark.in</p>
                   </div>
                 </div>
               </a>

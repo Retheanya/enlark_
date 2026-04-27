@@ -1,7 +1,9 @@
+import { COMPANY } from '../config/company';
+
 export function FloatingContact() {
   return (
     <div className="floating-contact">
-      <a href="mailto:marketing@enlark.in" className="floating-icon email-circle" title="Email Us">
+      <a href={`mailto:${COMPANY.email}`} className="floating-icon email-circle" title="Email Us">
         <svg
           width="24"
           height="24"
