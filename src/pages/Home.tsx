@@ -80,7 +80,7 @@ function AboutSection() {
             </div>
             <p className="badge-years no-margin-important" style={{ letterSpacing: '1px', fontWeight: '800' }}>2019-2026</p>
             <p className="badge-text decoration no-margin-important" style={{ fontWeight: '600' }}>
-              3 Decades of history of quality and reliability
+              3+ years of history of quality and reliability
             </p>
           </div>
         </div>
