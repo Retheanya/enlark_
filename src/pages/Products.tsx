@@ -39,7 +39,6 @@ export function ProductsPage() {
                       <div className="product-tile-info">
                         <div className="product-tile-name">{product.name}</div>
                         <div className="explore-more-btn">Explore more &rarr;</div>
-                        {product.id === 15 && <span className="status-badge">Pending</span>}
                       </div>
                     </div>
                   ))}

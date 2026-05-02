@@ -42,6 +42,9 @@ import p14_1 from '../assets/14.Milking Machine Accessories/01.Milking Machine A
 import p14_2 from '../assets/14.Milking Machine Accessories/02..Milking Machine Accessories.jpg';
 import p14_3 from '../assets/14.Milking Machine Accessories/03.Milking Machine Accessories.jpg';
 
+// Card 15
+import p15_1 from '../assets/vaccum_system.jpeg';
+
 export interface Product {
     id: number;
     name: string;
@@ -151,7 +154,7 @@ export const products: Product[] = [
     { 
         id: 15, 
         category: 'Special Systems', 
-        name: 'Vacuum Systems - Roots Blower And Chamber Attached - Pending', 
-        image: p1_1 
+        name: 'Vacuum Systems - Roots Blower And Chamber Attached', 
+        image: p15_1 
     },
 ];
