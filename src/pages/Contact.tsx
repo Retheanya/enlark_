@@ -4,7 +4,7 @@ import { COMPANY } from '../config/company';
 export function ContactPage() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   return (
-    <div className="contact-premium-page" style={{ backgroundColor: '#f8f9fa', minHeight: 'auto', paddingTop: '40px', paddingBottom: '30px', overflowX: 'hidden' }}>
+    <div className="contact-premium-page" style={{ backgroundColor: '#f8f9fa', minHeight: 'auto', paddingTop: '40px', paddingBottom: '30px' }}>
       <div className="container" style={{ maxWidth: '1100px' }}>
         <div className="contact-grid-container" style={{ display: 'grid', gap: '40px', position: 'relative' }}>
           
@@ -155,9 +155,9 @@ export function ContactPage() {
                 <div style={{ color: '#333' }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
-                <div style={{ overflow: 'hidden' }}>
+                <div style={{}}>
                   <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginLeft: '-10px' }}>
                     <a href={`mailto:${COMPANY.emailSales}`} className="contact-info-card-text" style={{ textDecoration: 'none' }}>{COMPANY.emailSales}</a>
                     <a href={`mailto:${COMPANY.emailViswa}`} className="contact-info-card-text" style={{ textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
                   </div>
@@ -187,9 +187,9 @@ export function ContactPage() {
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                     </svg>
                   </div>
-                  <div style={{ overflow: 'hidden' }}>
+                  <div style={{}}>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Website</h3>
-                    <p className="contact-info-card-text">{COMPANY.website}</p>
+                    <div className="contact-info-card-text" style={{ marginLeft: '-10px', color: '#333' }}>{COMPANY.website}</div>
                   </div>
                 </div>
               </a>
