@@ -5,6 +5,7 @@ export const COMPANY = {
     'SF NO 610/1A, Vadakku Thottam, L&T Road, L & T Road, Vadakku Thottam, Near L & T campus, Malumichampatti, Coimbatore, Tamil Nadu 641050',
   phoneDisplay: '+91 73382 84639',
   phoneHref: '+917338284639',
+  email: 'sales@enlark.co.in',
   emailSales: 'sales@enlark.co.in',
   emailViswa: 'viswa@enlark.co.in',
   mapEmbedSrc:
