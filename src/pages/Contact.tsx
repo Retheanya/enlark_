@@ -157,9 +157,9 @@ export function ContactPage() {
                 </div>
                 <div style={{ overflow: 'hidden' }}>
                   <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginLeft: '-8px' }}>
-                    <a href={`mailto:${COMPANY.emailSales}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailSales}</a>
-                    <a href={`mailto:${COMPANY.emailViswa}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    <a href={`mailto:${COMPANY.emailSales}`} className="contact-info-card-text" style={{ textDecoration: 'none' }}>{COMPANY.emailSales}</a>
+                    <a href={`mailto:${COMPANY.emailViswa}`} className="contact-info-card-text" style={{ textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
                   </div>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export function ContactPage() {
                   </div>
                   <div style={{ overflow: 'hidden' }}>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Website</h3>
-                    <div style={{ fontWeight: '600', color: '#333', margin: 0, fontSize: '15px' }}>{COMPANY.website}</div>
+                    <p className="contact-info-card-text">{COMPANY.website}</p>
                   </div>
                 </div>
               </a>
