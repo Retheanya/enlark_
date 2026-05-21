@@ -27,7 +27,7 @@ export function ContactPage() {
                 const company = formData.get('Company');
                 const message = formData.get('Message');
                 
-                const mailtoUrl = `mailto:${COMPANY.email}?subject=New Inquiry from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0AMessage: ${message}`;
+                const mailtoUrl = `mailto:${COMPANY.emailSales}?subject=New Inquiry from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0AMessage: ${message}`;
                 window.location.href = mailtoUrl;
               }}
             >
@@ -108,17 +108,18 @@ export function ContactPage() {
               </a>
 
               {/* Email Card */}
-              <a href={`mailto:${COMPANY.email}`} style={{ textDecoration: 'none' }}>
-                <div className="info-card-premium" style={{ backgroundColor: 'white', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'grid', gridTemplateColumns: '40px 1fr', gap: '15px', alignItems: 'center' }}>
-                  <div style={{ color: '#333' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  </div>
-                  <div>
-                    <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
-                    <p id="strictly-lowercase-email" style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>marketing@enlark.in</p>
+              <div className="info-card-premium" style={{ backgroundColor: 'white', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'grid', gridTemplateColumns: '40px 1fr', gap: '15px', alignItems: 'center' }}>
+                <div style={{ color: '#333' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    <a href={`mailto:${COMPANY.emailSales}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailSales}</a>
+                    <a href={`mailto:${COMPANY.emailViswa}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
                   </div>
                 </div>
-              </a>
+              </div>
 
               {/* WhatsApp Card */}
               <a href={`https://wa.me/${COMPANY.phoneDisplay.replace(/[\s+]/g, '')}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>

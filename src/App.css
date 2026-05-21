@@ -19,7 +19,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  padding-right: 22px; /* Adjusted to move content left for perfect alignment with Navbar links */
+  padding-right: 0; /* Reset to 0 to align perfectly with Navbar links */
 }
 
 .contact-info {
@@ -39,6 +39,109 @@
 
 .contact-item svg {
   color: #089AD3;
+}
+
+/* Email Hover Dropdown in Top Header */
+.email-dropdown-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.email-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.email-trigger:hover {
+  background: rgba(8, 154, 211, 0.08);
+}
+
+.email-trigger-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-dark-blue);
+}
+
+.dropdown-arrow {
+  margin-left: 2px;
+  color: #089AD3;
+  transition: transform 0.2s ease;
+}
+
+.email-dropdown-wrapper:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.email-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  background: white;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1100;
+}
+
+/* Hover reveal */
+.email-dropdown-wrapper:hover .email-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.email-dropdown-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  text-align: left;
+}
+
+.email-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.email-dropdown-item:hover {
+  background: rgba(8, 154, 211, 0.06);
+}
+
+.email-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #089AD3;
+  font-weight: 700;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.email-address {
+  font-size: 13.5px;
+  color: #333;
+  font-weight: 600;
+  white-space: nowrap;
+  display: block;
+}
+
+.email-dropdown-item:hover .email-address {
+  color: #ff5722 !important; /* Premium color transition on hover */
 }
 
 /* Navbar */
@@ -1570,6 +1673,10 @@
 }
 
 @media (max-width: 768px) {
+  .top-header {
+    display: none !important; /* Hide contact header on mobile only */
+  }
+
   .brand-name {
     font-size: 14px;
     line-height: 1.1;
@@ -1606,7 +1713,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .navbar-inner {
     flex-wrap: nowrap;
     gap: 10px;
@@ -1659,10 +1766,6 @@
   .nav-links li a:hover {
     transform: none;
     background: rgba(0, 0, 0, 0.05);
-  }
-
-  .top-header {
-    display: none !important; /* Hide contact header on mobile */
   }
 
   .nav-hamburger {

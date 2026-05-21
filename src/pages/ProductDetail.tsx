@@ -53,7 +53,7 @@ export function ProductDetailPage() {
               <p>Category: {product.category}</p>
               <p>Model ID: #{product.id}</p>
               <div className="cta-section">
-                 <button onClick={() => navigate('/contact')} className="quote-btn">Inquiry Now</button>
+                 <button onClick={() => navigate('/contact')} className="quote-btn">Enquire Now</button>
               </div>
            </div>
         </div>
