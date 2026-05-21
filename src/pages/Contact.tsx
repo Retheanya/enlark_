@@ -121,19 +121,6 @@ export function ContactPage() {
                 </div>
               </div>
 
-              {/* Website Card */}
-              <a href={`https://${COMPANY.website}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                <div className="info-card-premium" style={{ backgroundColor: 'white', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'grid', gridTemplateColumns: '40px 1fr', gap: '15px', alignItems: 'center' }}>
-                  <div style={{ color: '#333' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  </div>
-                  <div>
-                    <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Website</h3>
-                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>{COMPANY.website}</p>
-                  </div>
-                </div>
-              </a>
-
               {/* WhatsApp Card */}
               <a href={`https://wa.me/${COMPANY.phoneDisplay.replace(/[\s+]/g, '')}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <div className="info-card-premium" style={{ backgroundColor: 'white', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'grid', gridTemplateColumns: '40px 1fr', gap: '15px', alignItems: 'center' }}>
@@ -143,6 +130,23 @@ export function ContactPage() {
                   <div>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>WhatsApp</h3>
                     <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>Chat with us </p>
+                  </div>
+                </div>
+              </a>
+
+              {/* Website Card */}
+              <a href={`https://${COMPANY.website}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div className="info-card-premium" style={{ backgroundColor: 'white', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'grid', gridTemplateColumns: '40px 1fr', gap: '15px', alignItems: 'center' }}>
+                  <div style={{ color: '#333' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M2 12h20" />
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Website</h3>
+                    <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>{COMPANY.website}</p>
                   </div>
                 </div>
               </a>
