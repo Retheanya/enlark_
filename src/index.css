@@ -335,3 +335,8 @@ h3.forced-black-text {
   text-transform: lowercase !important;
 }
 
+
+.email-dropdown-item svg {
+  flex-shrink: 0 !important;
+}
+

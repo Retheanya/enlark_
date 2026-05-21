@@ -101,7 +101,7 @@ function Footer() {
                   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                 </svg>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', textAlign: 'left' }}>
                 <a href={`https://${COMPANY.website}`} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{COMPANY.website}</a>
               </div>
             </li>
