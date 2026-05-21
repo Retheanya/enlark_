@@ -84,7 +84,7 @@ function Footer() {
                 <a href={`mailto:${COMPANY.emailViswa}`} style={{ color: 'inherit', textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
               </div>
             </li>
-            <li>
+            <li style={{ alignItems: 'center' }}>
               <div className="icon-wrap" style={{ color: '#089ADE' }}>
                 <svg
                   width="20"

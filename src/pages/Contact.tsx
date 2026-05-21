@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { COMPANY } from '../config/company';
 
 export function ContactPage() {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   return (
     <div className="contact-premium-page" style={{ backgroundColor: '#f8f9fa', minHeight: 'auto', paddingTop: '40px', paddingBottom: '30px', overflowX: 'hidden' }}>
       <div className="container" style={{ maxWidth: '1100px' }}>
@@ -18,17 +20,47 @@ export function ContactPage() {
             <form 
               className="enlark-premium-form" 
               style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                const formData = new FormData(e.currentTarget);
-                const name = formData.get('Name');
-                const email = formData.get('Email');
-                const phone = formData.get('Phone');
-                const company = formData.get('Company');
-                const message = formData.get('Message');
+                const formElement = e.currentTarget;
+                setStatus('submitting');
+                const formData = new FormData(formElement);
+                const data = {
+                  Name: formData.get('Name'),
+                  Email: formData.get('Email'),
+                  Phone: formData.get('Phone'),
+                  Company: formData.get('Company'),
+                  Message: formData.get('Message'),
+                  _subject: `New Inquiry from ${formData.get('Name')}`,
+                  _template: 'table'
+                };
                 
-                const mailtoUrl = `mailto:${COMPANY.emailSales}?subject=New Inquiry from ${name}&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0AMessage: ${message}`;
-                window.location.href = mailtoUrl;
+                try {
+                  const response = await fetch(`https://formsubmit.co/ajax/sales@enlarkindia.com`, {
+                    method: 'POST',
+                    headers: { 
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                  });
+                  
+                  // FormSubmit requires email activation first. If unactivated, it returns 400.
+                  // The user requested it to ALWAYS show success.
+                  if (!response.ok) {
+                     console.warn('FormSubmit returned an error (likely needs activation). Showing success anyway as requested.');
+                  }
+                  
+                  setStatus('success');
+                  formElement.reset();
+                  setTimeout(() => setStatus('idle'), 5000);
+                  
+                } catch (error) {
+                  console.error('Network error during form submission:', error);
+                  setStatus('success'); // Force success on UI
+                  formElement.reset();
+                  setTimeout(() => setStatus('idle'), 5000);
+                }
               }}
             >
               
@@ -57,24 +89,35 @@ export function ContactPage() {
                 <textarea name="Message" rows={4} style={{ width: '100%', border: 'none', borderBottom: '2px solid #ddd', padding: '8px 0', outline: 'none', backgroundColor: 'transparent', transition: 'border-color 0.3s' }} required />
               </div>
 
-              <button type="submit" className="submit-btn" style={{ 
+              <button type="submit" disabled={status === 'submitting'} className="submit-btn" style={{ 
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '10px',
                 alignSelf: 'flex-start', 
-                backgroundColor: '#089AD3', 
+                backgroundColor: status === 'submitting' ? '#ccc' : '#089AD3', 
                 color: 'white', 
                 border: 'none', 
                 padding: '12px 35px', 
                 fontWeight: '700', 
-                cursor: 'pointer',
+                cursor: status === 'submitting' ? 'not-allowed' : 'pointer',
                 marginTop: '10px',
                 borderRadius: '4px',
                 transition: 'all 0.3s ease'
               }}>
-                Send Message
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                {status !== 'submitting' && <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>}
               </button>
+
+              {status === 'success' && (
+                <div style={{ color: '#4caf50', fontWeight: '600', marginTop: '10px', fontSize: '14px', backgroundColor: 'rgba(76, 175, 80, 0.1)', padding: '10px', borderRadius: '4px' }}>
+                  ✓ Message sent successfully! We will get back to you soon.
+                </div>
+              )}
+              {status === 'error' && (
+                <div style={{ color: '#f44336', fontWeight: '600', marginTop: '10px', fontSize: '14px', backgroundColor: 'rgba(244, 67, 54, 0.1)', padding: '10px', borderRadius: '4px' }}>
+                  ✕ Failed to send message. Please try again later.
+                </div>
+              )}
 
             </form>
           </div>
@@ -114,9 +157,9 @@ export function ContactPage() {
                 </div>
                 <div style={{ overflow: 'hidden' }}>
                   <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                    <a href={`mailto:${COMPANY.emailSales}`} className="contact-info-card-text" style={{ textDecoration: 'none' }}>{COMPANY.emailSales}</a>
-                    <a href={`mailto:${COMPANY.emailViswa}`} className="contact-info-card-text" style={{ textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginLeft: '-8px' }}>
+                    <a href={`mailto:${COMPANY.emailSales}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailSales}</a>
+                    <a href={`mailto:${COMPANY.emailViswa}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailViswa}</a>
                   </div>
                 </div>
               </div>
@@ -146,7 +189,7 @@ export function ContactPage() {
                   </div>
                   <div style={{ overflow: 'hidden' }}>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Website</h3>
-                    <p className="contact-info-card-text">{COMPANY.website}</p>
+                    <div style={{ fontWeight: '600', color: '#333', margin: 0, fontSize: '15px' }}>{COMPANY.website}</div>
                   </div>
                 </div>
               </a>
