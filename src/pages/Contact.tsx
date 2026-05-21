@@ -112,7 +112,7 @@ export function ContactPage() {
                 <div style={{ color: '#333' }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
-                <div>
+                <div style={{ wordBreak: 'break-word' }}>
                   <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>E-mail</h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                     <a href={`mailto:${COMPANY.emailSales}`} style={{ fontWeight: '600', color: '#ff5722', textDecoration: 'none' }}>{COMPANY.emailSales}</a>
@@ -144,7 +144,7 @@ export function ContactPage() {
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                     </svg>
                   </div>
-                  <div>
+                  <div style={{ wordBreak: 'break-word' }}>
                     <h3 style={{ fontWeight: '700', color: '#333', marginBottom: '5px' }}>Website</h3>
                     <p style={{ fontWeight: '600', color: '#ff5722', margin: 0 }}>{COMPANY.website}</p>
                   </div>
