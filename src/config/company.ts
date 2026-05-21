@@ -9,6 +9,6 @@ export const COMPANY = {
   emailSales: 'sales@enlark.co.in',
   emailViswa: 'viswa@enlark.co.in',
   mapEmbedSrc:
-    'https://www.google.com/maps?q=Enlark+Enterprises+Pvt+Ltd+SF+NO+610%2F1A+Vadakku+Thottam+L%26T+Road+Coimbatore&output=embed',
+    'https://www.google.com/maps?q=SF+NO+610%2F1A,+Vadakku+Thottam,++Near+L+%26+T+campus,+Malumichampatti,+Coimbatore,+Tamil+Nadu+641050&output=embed',
 } as const;
 
